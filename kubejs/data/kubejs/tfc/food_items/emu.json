@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "kubejs:raw_emu"
+  },
+  "hunger": 4,
+  "saturation": 0,
+  "decay_modifier": 2,
+  "protein": 1.5
+
+}

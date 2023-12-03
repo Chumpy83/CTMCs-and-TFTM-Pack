@@ -1,0 +1,85 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "kubejs:raw_whale",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 16,
+                  "max": 42,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bone",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 6,
+                  "max": 18,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "alexsmobs:cachalot_whale_tooth",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 4,
+                  "max": 14,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "tfc:blubber",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 14,
+                  "max": 32,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

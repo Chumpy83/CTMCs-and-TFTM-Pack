@@ -1,0 +1,13 @@
+{
+  "ingredient": {
+    "item": "delightful:delux_cheeseburger"
+  },
+  "hunger": 8,
+  "saturation": 8,
+  "decay_modifier": 2.5,
+  "dairy": 2,
+  "grain": 1.5,
+  "protein": 3,
+  "vegetables": 1.5
+
+}

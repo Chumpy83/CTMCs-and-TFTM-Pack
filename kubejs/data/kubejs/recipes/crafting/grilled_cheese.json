@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "ZYZ",
+    " X "
+  ],
+  "key": {
+    "Y": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/butter"
+      }
+    },
+    "X": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "firmalife:foods/slices"
+      }
+    },
+    "Z": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "firmalife:foods/cheeses"
+      }
+    }
+  },
+  "result": {
+    "item": "kubejs:raw_grilled_cheese",
+    "count": 1
+  }
+}

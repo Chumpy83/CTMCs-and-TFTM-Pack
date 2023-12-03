@@ -1,0 +1,12 @@
+{
+  "values": [
+    "tfc:food/grouse",
+    "tfc:food/chicken",
+    "tfc:food/duck",
+    "tfc:food/turkey",
+    "tfc:food/pheasant",
+    "tfc:food/quail",
+    "tfc:food/rabbit",
+    "minecraft:egg"
+  ]
+}

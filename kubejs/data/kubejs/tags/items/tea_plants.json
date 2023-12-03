@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:plant/calendula",
+    "tfc:plant/dandelion",
+    "tfc:plant/hibiscus",
+    "tfc:plant/labrador_tea",
+    "tfc:plant/lilac",
+    "tfc:plant/rose"
+  ]
+}

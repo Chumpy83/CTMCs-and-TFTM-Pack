@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "alexsmobs:cooked_moose_ribs"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 1,
+  "protein": 2
+}

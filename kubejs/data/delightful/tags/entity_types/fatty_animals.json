@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:cow",
+    "tfc:pig",
+    "tfc:musk_ox"
+
+  ]
+}

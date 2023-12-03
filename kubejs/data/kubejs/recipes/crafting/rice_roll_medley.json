@@ -1,0 +1,36 @@
+{   
+   "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "XZZ",
+      "XYB",
+      "XY "
+    ],
+    "key": {
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:salmon_roll" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:cod_roll" 
+        }
+      },
+      "Z": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:kelp_roll_slice" 
+        }
+      },
+      "B": {
+        "tag": "tfc:bowls"
+      }
+    },
+    "result": {
+      "item": "farmersdelight:rice_roll_medley_block",
+      "count": 1
+    }
+}
+

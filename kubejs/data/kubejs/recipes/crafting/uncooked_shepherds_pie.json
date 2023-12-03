@@ -1,0 +1,44 @@
+{   
+   "type": "tfc:damage_inputs_shaped_crafting",
+   "recipe": {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "XXX",
+        "YZY",
+        "KB "
+      ],
+      "key": {
+        "X": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:food/potato" 
+          }
+        },
+        "Y": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "tag": "tfc:foods/vegetables"
+          }
+        },
+        "Z": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:food/beef" 
+          }
+        },
+        "B": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "kubejs:raw_pie_crust" 
+          }
+        },
+        "K": {
+          "tag": "tfc:knives"
+        }
+    },
+    "result": {
+      "item": "kubejs:raw_shepherds_pie"
+    }
+   }
+}
+

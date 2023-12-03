@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "B"
+  ],
+  "key":{
+    "X": {
+      "type": "tfc:fluid_item",
+      "fluid_ingredient": {
+        "ingredient": "kubejs:bone_broth",
+        "amount": 250
+      }
+    },
+    "B": {
+      "tag": "tfc:bowls"
+    }
+  },
+  "result": {
+    "item": "farmersdelight:bone_broth"
+  }
+}

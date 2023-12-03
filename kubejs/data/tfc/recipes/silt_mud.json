@@ -1,0 +1,30 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BCB",
+    "CAC",
+    "BCB"
+  ],
+  "key": {
+    "A": {
+      "type": "tfc:fluid_item",
+      "fluid_ingredient": {
+        "ingredient": {
+          "fluid": "water"
+        },
+        "amount": 100
+      }
+    },
+    "B": {
+      "item": "tfc:dirt/silt"
+    },
+    "C": {
+      "item": "tfc:straw"
+    }
+  },
+  "result": {
+    "item": ["tfc:mud/silt", "tfc:mud/silt", "tfc:mud/silt", "tfc:mud/silt"]
+  }
+}
+

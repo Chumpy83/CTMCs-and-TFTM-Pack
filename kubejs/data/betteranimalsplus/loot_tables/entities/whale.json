@@ -1,0 +1,65 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "tfc:blubber",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 8,
+                  "max": 22,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bone",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 6,
+                  "max": 12,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "kubejs:raw_whale",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 10,
+                  "max": 32,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

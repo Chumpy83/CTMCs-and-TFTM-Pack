@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "tfc:food/beef"
+    }
+  ],
+  "tool": {
+    "tag": "tfc:knives"
+  },
+  "result": [
+    {
+      "item": "farmersdelight:minced_beef",
+      "count": 2
+    }
+  ]
+}

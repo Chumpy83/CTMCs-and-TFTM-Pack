@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "tag": "tfc:milks"
+  },
+  "thirst": 10,
+  "food": {
+    "hunger": 0,
+    "saturation": 0,
+    "dairy": 1.0
+  }
+}

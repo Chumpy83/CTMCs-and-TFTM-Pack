@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:mutton_wrap"
+  },
+  "hunger": 6,
+  "saturation": 4,
+  "decay_modifier": 1.5,
+  "protein": 1,
+  "grain": 1,
+  "vegetables": 1,
+  "dairy": 1
+}

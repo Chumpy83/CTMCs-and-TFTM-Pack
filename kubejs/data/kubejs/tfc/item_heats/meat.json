@@ -1,0 +1,155 @@
+{
+  "ingredient": [
+    {
+      "item": "tfc:food/beef"
+    },
+    {
+      "item": "tfc:food/pork"
+    },
+    {
+      "item": "tfc:food/chicken"
+    },
+    {
+      "item": "tfc:food/quail"
+    },
+    {
+      "item": "tfc:food/mutton"
+    },
+    {
+      "item": "tfc:food/bear"
+    },
+    {
+      "item": "tfc:food/horse_meat"
+    },
+    {
+      "item": "tfc:food/pheasant"
+    },
+    {
+      "item": "tfc:food/venison"
+    },
+    {
+      "item": "tfc:food/wolf"
+    },
+    {
+      "item": "tfc:food/rabbit"
+    },
+    {
+      "item": "tfc:food/hyena"
+    },
+    {
+      "item": "tfc:food/duck"
+    },
+    {
+      "item": "tfc:food/chevon"
+    },
+    {
+      "item": "tfc:food/gran_feline"
+    },
+    {
+      "item": "tfc:food/camelidae"
+    },
+    {
+      "item": "tfc:food/cod"
+    },
+    {
+      "item": "tfc:food/bluegill"
+    },
+    {
+      "item": "tfc:food/salmon"
+    },
+    {
+      "item": "tfc:food/tropical_fish"
+    },
+    {
+      "item": "tfc:food/turtle"
+    },
+    {
+      "item": "tfc:food/calamari"
+    },
+    {
+      "item": "tfc:food/shellfish"
+    },
+    {
+      "item": "tfc:food/grouse"
+    },
+    {
+      "item": "tfc:food/turkey"
+    },
+    {
+      "item": "farmersdelight:minced_beef"
+    },
+    {
+      "item": "farmersdelight:ham"
+    },
+    {
+      "item": "kubejs:raw_emu"
+    },
+    {
+      "item": "kubejs:raw_birdmeat"
+    },
+    {
+      "item": "kubejs:raw_primate"
+    },
+    {
+      "item": "kubejs:raw_snake"
+    },
+    {
+      "item": "kubejs:raw_shark"
+    },
+    {
+      "item": "kubejs:raw_raccoon"
+    },
+    {
+      "item": "kubejs:raw_anteater"
+    },
+    {
+      "item": "kubejs:raw_badger"
+    },
+    {
+      "item": "kubejs:raw_seal"
+    },
+    {
+      "item": "kubejs:raw_walrus"
+    },
+    {
+      "item": "kubejs:raw_elephant"
+    },
+    {
+      "item": "kubejs:raw_bison"
+    },
+    {
+      "item": "kubejs:raw_flying_fish"
+    },
+    {
+      "item": "kubejs:raw_rhino"
+    },
+    {
+      "item": "kubejs:raw_giraffe"
+    },
+    {
+      "item": "kubejs:raw_hippo"
+    },
+    {
+      "item": "kubejs:raw_coyote"
+    },
+    {
+      "item": "kubejs:raw_barracuda"
+    },
+    {
+      "item": "kubejs:raw_piranha"
+    },
+    {
+      "item": "kubejs:raw_reptile"
+    },
+    {
+      "item": "kubejs:raw_whale"
+    },
+    {
+      "item": "tfc:food/potato"
+    },
+    {
+      "item": "betteranimalsplus:turkey_raw"
+    }
+  ],
+  "heat_capacity": 1.0
+}

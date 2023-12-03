@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "tfc:pumpkin"
+    }
+  ],
+  "tool": {
+    "tag": "tfc:hammers"
+  },
+  "result": [
+    {
+      "item": "firmalife:food/pumpkin_chunks",
+      "count": 4
+    }
+  ]
+}

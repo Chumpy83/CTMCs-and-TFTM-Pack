@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets",
+    "#forge:ingots",
+    "minecraft:diamond_block",
+    "minecraft:emerald_block"
+    "#tfc:forge_fuel",
+    "tfc:metal/axe_head/copper"
+    "#tfc:metal_item/copper",
+    "#tfc:metal_item/bizmuth_bronze",
+    "#tfc:metal_item/bronze",
+    "#tfc:metal_item/black_bronze",
+    "#tfc:metal_item/black_steel",
+    "#tfc:metal_item/blue_steel",
+    "#tfc:metal_item/red_steel",
+    "#tfc:metal_item/steel",
+    "#tfc:metal_item/wrought_iron",
+    "minecraft:shears",
+    "minecraft:lightning_rod"
+  ]
+}

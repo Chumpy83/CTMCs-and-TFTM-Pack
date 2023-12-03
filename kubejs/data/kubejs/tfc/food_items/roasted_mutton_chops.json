@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:roasted_mutton_chops"
+  },
+  "hunger": 6,
+  "saturation": 3,
+  "decay_modifier": 2,
+  "protein": 2,
+  "vegetables": 1,
+  "fruit": 1,
+  "grain": 1
+}

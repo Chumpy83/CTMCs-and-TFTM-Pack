@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " XS",
+    "YPC",
+    " B "
+  ],
+  "key": {
+    "X": {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "item": "tfc:food/boiled_egg" 
+      }
+    },
+    "Y": {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "tag": "tfc:foods/cooked_meats" 
+      }
+    },
+    "C": {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "tag": "tfc:foods/vegetables" 
+      }
+    },
+    "P": {
+      "type":"tfc:not_rotten",
+      "ingredient": { 
+        "item": "kubejs:pasta" 
+      }
+    },
+    "S": {
+      "type":"tfc:not_rotten",
+      "ingredient": { 
+        "item": "tfc:food/dried_seaweed" 
+      }
+    },
+    "B": {
+      "type":"tfc:not_rotten",
+      "ingredient": { 
+        "item": "farmersdelight:bone_broth" 
+      }
+    }
+  },
+  "result": {
+    "item": "farmersdelight:noodle_soup",
+    "count": 1
+  }
+}
+

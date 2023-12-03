@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "kubejs:cookie_dough"
+  },
+  "hunger": 6,
+  "saturation": 6,
+  "decay_modifier": 1,
+  "dairy": 1,
+  "grain": 1,
+  "protein": 1
+
+}

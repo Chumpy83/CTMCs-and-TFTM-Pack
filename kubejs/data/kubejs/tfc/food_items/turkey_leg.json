@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "betteranimalsplus:turkey_leg_raw"
+  },
+  "hunger": 2,
+  "saturation": 0,
+  "decay_modifier": 2.5,
+  "protein": 0.75
+
+}

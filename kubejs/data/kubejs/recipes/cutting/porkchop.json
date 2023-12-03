@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "tfc:food/pork"
+    }
+  ],
+  "tool": {
+    "tag": "tfc:knives"
+  },
+  "result": [
+    {
+      "item": "firmalife:food/bacon",
+      "count": 4
+    }
+  ]
+}

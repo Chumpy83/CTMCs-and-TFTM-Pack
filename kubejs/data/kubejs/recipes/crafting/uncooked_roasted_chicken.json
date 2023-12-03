@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "YXY",
+    "YZY"
+  ],
+  "key": {
+    "X": {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "item": "tfc:food/chicken" 
+      }
+    },
+    "Y": {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "tag": "tfc:foods/vegetables" 
+      }
+    },
+    "Z": {
+      "tag": "tfc:bowls"
+    }
+  },
+  "result": {
+    "item": "kubejs:raw_roast_chicken",
+    "count": 1
+  }
+}

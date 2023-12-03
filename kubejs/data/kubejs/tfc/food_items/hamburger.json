@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:hamburger"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 1,
+  "grain": 1,
+  "vegetables": 1.5,
+  "protein": 1.5
+}

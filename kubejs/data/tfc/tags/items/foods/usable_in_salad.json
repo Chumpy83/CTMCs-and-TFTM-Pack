@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#tfc:foods/fruits",
+    "#tfc:foods/vegetables",
+    "#tfc:foods/cooked_meats",
+    "firmalife:food/shredded_cheese",
+    "#tfc:foods/dairy",
+    "firmalife:food/toast",
+    "tfc:food/cooked_egg",
+    "farmersdelight:pumpkin_slice",
+    "alexsmobs:boiled_emu_egg"
+  ]
+}

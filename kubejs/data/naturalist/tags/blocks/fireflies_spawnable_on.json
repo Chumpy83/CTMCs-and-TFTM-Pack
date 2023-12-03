@@ -1,0 +1,8 @@
+{
+  "values": [
+    "minecraft:grass_block",
+    "#minecraft:leaves",
+    "#tfc:plants",
+    "#tfc:grass"
+  ]
+}

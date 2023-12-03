@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "kubejs:matcha_ice_cream"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 3,
+  "dairy": 0.8,
+  "vegetables": 0.5
+
+}

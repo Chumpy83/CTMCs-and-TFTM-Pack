@@ -1,0 +1,39 @@
+{
+  "type": "tfc:pot",
+  "ingredients": [
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "firmalife:spice/ground_cinnamon"
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "tfc:foods/apples"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "tfc:foods/apples"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "tfc:foods/apples"
+      }
+    }
+  ],
+  "fluid_ingredient": {
+    "ingredient": "minecraft:water",
+    "amount": 1000
+  },
+  "duration": 1000,
+  "temperature": 100,
+  "fluid_output": {
+    "fluid": "kubejs:apple_juice",
+    "amount": 1000
+  }
+}

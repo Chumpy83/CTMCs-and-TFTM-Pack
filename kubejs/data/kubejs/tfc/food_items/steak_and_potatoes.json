@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:steak_and_potatoes"
+  },
+  "hunger": 6,
+  "saturation": 4,
+  "decay_modifier": 2,
+  "grain": 1,
+  "dairy": 0.5,
+  "vegetables": 2.5,
+  "protein": 2.5
+}

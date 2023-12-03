@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/pie_dough"
+      }
+    },
+    {
+      "item": "firmalife:pie_pan"
+    }
+  ],
+  "result": {
+      "item": "kubejs:raw_pie_crust",
+      "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#tfc:foods/vegetables",
+    "#tfc:foods/cooked_meats",
+    "#tfc:foods/dairy",
+    "tfc:food/cooked_egg",
+    "farmersdelight:pumpkin_slice"
+  ]
+}

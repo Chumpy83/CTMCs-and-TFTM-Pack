@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:sweet_berry_cheesecake_slice"
+  },
+  "hunger": 4,
+  "saturation": 4,
+  "decay_modifier": 2,
+  "grain": 1,
+  "dairy:": 2,
+  "fruit": 2
+}

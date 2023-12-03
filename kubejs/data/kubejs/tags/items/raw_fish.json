@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:food/salmon",
+    "tfc:food/shellfish",
+    "tfc:food/cod",
+    "tfc:food/bluegill",
+    "tfc:food/tropical_fish",
+    "tfc:food/calamari",
+    "farmersdelight:cod_slice",
+    "farmersdelight:salmon_slice",
+    "kubejs:raw_shark",
+    "kubejs:raw_flying_fish",
+    "kubejs:raw_barracuda",
+    "kubejs:raw_piranha",
+    "kubejs:raw_whale",
+    "betteranimalsplus:crab_meat_raw",
+    "betteranimalsplus:eel_meat_raw",
+    "alexsmobs:raw_catfish"
+
+  ]
+}

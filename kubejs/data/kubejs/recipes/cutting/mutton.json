@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "tfc:food/mutton"
+    }
+  ],
+  "tool": {
+    "tag": "tfc:knives"
+  },
+  "result": [
+    {
+      "item": "farmersdelight:mutton_chops",
+      "count": 2
+    }
+  ]
+}

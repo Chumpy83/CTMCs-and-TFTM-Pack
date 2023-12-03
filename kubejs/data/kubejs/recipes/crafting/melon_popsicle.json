@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "YIX",
+    " Z "
+  ],
+  "key": {
+    "I": {
+      "item": "firmalife:ice_shavings"
+    },
+    "X": {
+      "item": "minecraft:sugar"
+    },
+    "Y": {
+      "item": "minecraft:melon_slice"
+    },
+    "Z": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "farmersdelight:melon_popsicle"
+  }
+}

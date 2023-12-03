@@ -1,0 +1,38 @@
+{   
+   "type": "tfc:damage_inputs_shaped_crafting",
+   "recipe": {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "K  ",
+        "ZZZ",
+        "SBY"
+      ],
+      "key": {
+        "Y": {
+        "item": "minecraft:sugar"
+        },
+        "Z": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "tag": "tfc:foods/apples" 
+          }
+        },
+        "B": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "kubejs:raw_pie_crust" 
+          }
+        },
+        "K": {
+          "tag": "tfc:knives"
+        },
+        "S": {
+        "item": "firmalife:spice/ground_cinnamon"
+        }
+    },
+    "result": {
+      "item": "kubejs:raw_apple_pie"
+    }
+   }
+}
+

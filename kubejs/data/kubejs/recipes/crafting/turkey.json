@@ -1,0 +1,29 @@
+{
+  "type": "tfc:extra_products_shapeless_crafting",
+  "extra_products": [
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "tfc:food/cooked_turkey"
+    }
+  ],
+  "recipe": {
+    "type": "tfc:damage_inputs_shapeless_crafting",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "betteranimalsplus:turkey_cooked"
+        },
+        {
+          "tag": "tfc:knives"
+        }
+      ],
+      "result": {
+        "item": "betteranimalsplus:turkey_leg_cooked",
+        "count": 2
+      }
+    }
+  }
+}

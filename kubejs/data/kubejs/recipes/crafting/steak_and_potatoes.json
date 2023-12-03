@@ -1,0 +1,36 @@
+{   
+   "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "XYB",
+      " Z "
+    ],
+    "key": {
+      "B": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "firmalife:food/toast_with_butter" 
+        }
+      },
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "kubejs:baked_potato" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/cooked_beef" 
+        }
+      },
+      "Z": {
+        "tag": "tfc:bowls"
+      }
+    },
+    "result": {
+      "item": "farmersdelight:steak_and_potatoes",
+      "count": 1
+    }
+}
+

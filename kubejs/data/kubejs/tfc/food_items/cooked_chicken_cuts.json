@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:cooked_chicken_cuts"
+  },
+  "hunger": 2,
+  "saturation": 1,
+  "decay_modifier": 2.5,
+  "protein": 1.25
+}

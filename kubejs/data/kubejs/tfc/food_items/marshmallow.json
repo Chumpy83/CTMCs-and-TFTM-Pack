@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "kubejs:marshmallow"
+  },
+  "hunger": 2,
+  "saturation": 4,
+  "decay_modifier": 0
+
+}

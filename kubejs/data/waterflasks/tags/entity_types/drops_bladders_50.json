@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:cow",
+    "tfc:musk_ox",
+    "tfc:yak",
+    "betteranimalsplus:reindeer",
+    "betteranimalsplus:whale",
+    "alexsmobs:bison",
+    "alexsmobs:elephant",
+    "alexsmobs:orca",
+    "naturalist:hippo"
+  ]
+}

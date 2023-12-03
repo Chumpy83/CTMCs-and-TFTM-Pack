@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "betteranimalsplus:crab_meat_raw"
+  },
+  "hunger": 1,
+  "saturation": 1,
+  "decay_modifier": 1.5,
+  "protein": 1
+
+}

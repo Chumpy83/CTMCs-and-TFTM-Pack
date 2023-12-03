@@ -1,0 +1,44 @@
+{   
+   "type": "tfc:damage_inputs_shaped_crafting",
+   "recipe": {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "KS ",
+        "XYZ",
+        " B "
+      ],
+      "key": {
+        "X": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:food/squash" 
+          }
+        },
+        "Y": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:food/tomato"
+          }
+        },
+        "Z": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:food/onion" 
+          }
+        },
+        "B": {
+          "tag": "tfc:bowls"
+        },
+        "K": {
+          "tag": "tfc:knives"
+        },
+        "S": {
+        "item": "firmalife:spice/basil_leaves"
+        }
+    },
+    "result": {
+      "item": "farmersdelight:ratatouille"
+    }
+   }
+}
+

@@ -1,0 +1,36 @@
+{   
+   "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "XYF",
+      " Z "
+    ],
+    "key": {
+      "F": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/beet" 
+        }
+      },
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "kubejs:baked_potato" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:cooked_mutton_chops" 
+        }
+      },
+      "Z": {
+        "tag": "tfc:bowls"
+      }
+    },
+    "result": {
+      "item": "farmersdelight:roasted_mutton_chops",
+      "count": 1
+    }
+}
+

@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "kubejs:grilled_cheese"
+  },
+  "hunger": 4,
+  "saturation": 4,
+  "decay_modifier": 1,
+  "grain": 2,
+  "dairy": 2
+}

@@ -1,0 +1,41 @@
+{
+  "type": "tfc:damage_inputs_shaped_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " X ",
+      "VZY",
+      " X "
+    ],
+    "key": {
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/dried_seaweed" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/cooked_rice" 
+        }
+      },
+      "Z": {
+        "type":"tfc:not_rotten",
+        "ingredient":{ 
+          "tag": "pluto:raw_fish" 
+        }
+      },
+      "V": {
+        "type":"tfc:not_rotten",
+        "ingredient": { 
+          "tag": "tfc:foods/vegetables" 
+        }
+      }
+    },
+    "result": {
+      "item": "farmersdelight:kelp_roll",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "ingredient": {
+    "item": "kubejs:baked_potato"
+  },
+  "hunger": 6,
+  "saturation": 10,
+  "decay_modifier": 1,
+  "vegetables": 1.5
+
+}

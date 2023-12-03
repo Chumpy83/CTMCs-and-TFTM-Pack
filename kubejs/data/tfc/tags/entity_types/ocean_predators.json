@@ -1,0 +1,14 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:dolphin",
+    "tfc:orca",
+    "betteranimalsplus:barracuda",
+    "betteranimalsplus:shark",
+    "alexsmobs:frilled_shark",
+    "alexsmobs:hammerhead_shark",
+    "alexsmobs:mantis_shrimp",
+    "alexsmobs:orca"
+  ]
+}

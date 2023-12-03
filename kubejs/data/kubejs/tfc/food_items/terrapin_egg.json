@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "alexsmobs:terrapin_egg"
+  },
+  "hunger": 4,
+  "saturation": 0,
+  "decay_modifier": 2.5,
+  "dairy": 0.25,
+  "protein": 1
+
+}

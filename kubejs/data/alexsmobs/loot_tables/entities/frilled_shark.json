@@ -1,0 +1,85 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "kubejs:raw_shark",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 2,
+                  "max": 8,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "alexsmobs:shark_tooth",
+            "functions": [
+                {
+                "function": "minecraft:set_count",
+                "count": {
+                    "min": 2,
+                    "max": 12,
+                    "type": "minecraft:uniform"
+                }
+            }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:bone",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 2,
+                  "max": 6,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "loot_pool",
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "tfc:blubber",
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "min": 2,
+                  "max": 6,
+                  "type": "minecraft:uniform"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

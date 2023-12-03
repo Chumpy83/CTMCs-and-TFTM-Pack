@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "delightful:pumpkin_pie_slice"
+  },
+  "hunger": 4,
+  "saturation": 1,
+  "water": 2.5,
+  "decay_modifier": 3,
+  "fruit": 0.75,
+  "grain": 0.5
+
+}

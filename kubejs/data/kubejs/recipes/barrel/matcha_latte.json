@@ -1,0 +1,19 @@
+{
+  "type": "tfc:barrel_instant_fluid",
+  "primary_fluid": {
+    "ingredient": {
+      "fluid": "kubejs:matcha_tea"
+    },
+    "amount": 9000
+  },
+  "added_fluid": {
+    "ingredient": {
+      "tag": "tfc:milks"
+    },
+    "amount": 1000
+  },
+  "output_fluid": {
+    "fluid": "kubejs:matcha_latte",
+    "amount": 10000
+  }
+}

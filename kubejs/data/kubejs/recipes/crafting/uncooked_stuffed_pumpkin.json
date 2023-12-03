@@ -1,0 +1,43 @@
+{   
+   "type": "tfc:damage_inputs_shaped_crafting",
+   "recipe": {
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "XXX",
+        "YZY",
+        "KP "
+      ],
+      "key": {
+        "X": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "tag": "tfc:foods/vegetables" 
+          }
+        },
+        "Y": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "tag": "tfc:foods/raw_meats"
+          }
+        },
+        "Z": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:food/cooked_rice" 
+          }
+        },
+        "P": {
+          "type": "tfc:not_rotten",
+          "ingredient": { 
+            "item": "tfc:pumpkin" 
+          }
+        },
+        "K": {
+          "tag": "tfc:knives"
+        }
+    },
+    "result": {
+      "item": "kubejs:raw_stuffed_pumpkin"
+    }
+   }
+}

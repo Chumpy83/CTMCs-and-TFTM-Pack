@@ -1,0 +1,41 @@
+{
+  "type": "tfc:extra_products_shaped_crafting",
+  "extra_products": [{
+    "item": "minecraft:bowl"
+  }],
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "   ",
+      "XYV",
+      " Z "
+    ],
+    "key": {
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/cooked_rice" 
+        }
+      },
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/cooked_egg" 
+        }
+      },
+      "V": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "tag": "tfc:foods/vegetables" 
+        }
+      },
+      "Z": {
+        "tag": "tfc:bowls"
+      }
+    },
+    "result": {
+      "item": "farmersdelight:fried_rice",
+      "count": 1
+    }
+  }
+}

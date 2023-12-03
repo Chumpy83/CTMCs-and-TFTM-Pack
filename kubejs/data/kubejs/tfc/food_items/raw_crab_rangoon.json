@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "kubejs:raw_crab_rangoon"
+  },
+  "hunger": 4,
+  "saturation": 0,
+  "decay_modifier": 1.5,
+  "dairy": 0.5,
+  "grain": 0.75,
+  "protein": 1
+
+}

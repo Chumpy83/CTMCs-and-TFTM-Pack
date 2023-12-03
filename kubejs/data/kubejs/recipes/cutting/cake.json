@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "tfc:cake"
+    }
+  ],
+  "tool": {
+    "tag": "tfc:knives"
+  },
+  "result": [
+    {
+      "item": "farmersdelight:cake_slice",
+      "count": 8
+    }
+  ]
+}

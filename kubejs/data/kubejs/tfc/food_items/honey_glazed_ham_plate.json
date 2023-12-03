@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:honey_glazed_ham"
+  },
+  "hunger": 6,
+  "saturation": 6,
+  "decay_modifier": 1.5,
+  "fruit": 1,
+  "protein": 1.5
+
+}

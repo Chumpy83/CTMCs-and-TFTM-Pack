@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:pasta_with_mutton_chop"
+  },
+  "hunger": 6,
+  "saturation": 4,
+  "decay_modifier": 2.5,
+  "grain": 1,
+  "protein": 1.5,
+  "vegetables": 1
+
+}

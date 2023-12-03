@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "kubejs:grub"
+  },
+  "hunger": 1,
+  "saturation": 1,
+  "protein": 0.5
+
+}

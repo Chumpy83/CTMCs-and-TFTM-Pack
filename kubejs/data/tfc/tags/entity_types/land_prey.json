@@ -1,0 +1,33 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "replace": false,
+  "values": [
+    "tfc:rabbit",
+    "tfc:fox",
+    "tfc:boar",
+    "tfc:turtle",
+    "tfc:penguin",
+    "tfc:deer",
+    "tfc:panda",
+    "tfc:moose",
+    "tfc:grouse",
+    "tfc:pheasant",
+    "tfc:turkey",
+    "tfc:ocelot",
+    "#tfc:livestock",
+    "alexsmobs:capuchin_monkey",
+    "alexsmobs:crow",
+    "alexsmobs:emu",
+    "alexsmobs:gazelle",
+    "alexsmobs:mungus",
+    "alexsmobs:platypus",
+    "alexsmobs:roadrunner",
+    "alexsmobs:seal",
+    "alexsmobs:shoebill",
+    "alexsmobs:tasmanian_devil",
+    "minecraft:goat",
+    "alexsmobs:toucan",
+    "alexsmobs:maned_wolf",
+    "alexsmobs:jerboa"
+  ]
+}

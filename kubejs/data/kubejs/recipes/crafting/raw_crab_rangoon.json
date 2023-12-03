@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "betteranimalsplus:crab_meat_raw"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "tfc:foods/dough"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "firmalife:foods/cheeses"
+      }
+    }
+  ],
+  "result": {
+      "item": "kubejs:raw_crab_rangoon",
+      "count": 2
+  }
+}

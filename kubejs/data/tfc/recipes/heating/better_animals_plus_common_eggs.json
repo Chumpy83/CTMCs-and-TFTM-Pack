@@ -1,0 +1,12 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "tag": "betteranimalsplus:eggs_common"
+  },
+  "result_item": {
+    "stack": {
+      "item": "tfc:food/cooked_egg"
+    }
+  },
+  "temperature": 200
+}

@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "delightful:smore"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 1,
+  "dairy": 0.5,
+  "grain": 1,
+  "protein": 0.25
+
+}

@@ -1,0 +1,16 @@
+{
+  "type": "firmalife:mixing_bowl",
+  "ingredients": [
+    {
+      "item": "tfc:powder/salt"
+    }
+  ],
+  "fluid_ingredient": {
+    "ingredient": "firmalife:cream",
+    "amount": 1000
+  },
+  "output_item": {
+    "item": "firmalife:food/butter",
+    "count": 4
+  }
+}

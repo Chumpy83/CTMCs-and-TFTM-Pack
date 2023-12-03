@@ -1,0 +1,17 @@
+{
+  "type": "firmalife:mixing_bowl",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/vanilla_ice_cream"
+      }
+    },
+    {
+      "item": "delightful:matcha"
+    }
+  ],
+  "output_item": {
+    "item": "kubejs:matcha_ice_cream"
+  }
+}

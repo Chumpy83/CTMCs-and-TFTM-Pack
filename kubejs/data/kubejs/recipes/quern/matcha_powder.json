@@ -1,0 +1,10 @@
+{
+  "type": "tfc:quern",
+  "ingredient": {
+    "tag": "delightful:tea_leaf"
+  },
+  "result": {
+    "item": "delightful:matcha",
+    "count": 2
+  }
+}

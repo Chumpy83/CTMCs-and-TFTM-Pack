@@ -1,0 +1,11 @@
+{
+  "ingredient": {
+    "item": "farmersdelight:apple_pie_slice"
+  },
+  "hunger": 4,
+  "saturation": 2,
+  "decay_modifier": 2,
+  "fruit": 2,
+  "grain": 1,
+  "dairy:": 0.5
+}

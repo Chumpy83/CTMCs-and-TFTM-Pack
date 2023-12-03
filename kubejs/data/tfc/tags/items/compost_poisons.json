@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#tfc:foods/meats",
+    "minecraft:bone",
+    "alexsmobs:maggot"
+  ]
+}

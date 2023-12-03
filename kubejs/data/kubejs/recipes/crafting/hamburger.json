@@ -1,0 +1,41 @@
+{
+  "type": "tfc:damage_inputs_shaped_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " X ",
+      "YPC",
+      " X "
+    ],
+    "key": {
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "tag": "firmalife:foods/slices" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/tomato" 
+        }
+      },
+      "C": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:cabbage_leaf" 
+        }
+      },
+      "P": {
+        "type":"tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:beef_patty" 
+        }
+      }
+    },
+    "result": {
+      "item": "farmersdelight:hamburger",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [ 
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "item": "tfc:food/cooked_egg"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "item": "tfc:food/cooked_egg"
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "item": "firmalife:food/cooked_bacon" 
+      }
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": { 
+        "item": "firmalife:food/cooked_bacon"
+      }
+    },
+    {
+        "tag": "tfc:bowls"
+    }
+  ],
+  "result": {
+    "item": "farmersdelight:bacon_and_eggs",
+    "count": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    "TYZ",
+    " X "
+  ],
+  "key": {
+    "Y": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/cooked_bacon"
+      }
+    },
+    "X": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/toast"
+      }
+    },
+    "Z": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "farmersdelight:cabbage_leaf"
+      }
+    },
+    "T": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "tfc:food/tomato"
+      }
+    }
+  },
+  "result": {
+    "item": "farmersdelight:bacon_sandwich",
+    "count": 1
+  }
+}

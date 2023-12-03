@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "alexsmobs:cooked_lobster_tail"
+  },
+  "hunger": 2,
+  "saturation": 2,
+  "decay_modifier": 2.25,
+  "protein": 1.5
+}

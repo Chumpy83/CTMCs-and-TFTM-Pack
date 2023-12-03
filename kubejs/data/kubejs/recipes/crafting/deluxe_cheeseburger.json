@@ -1,0 +1,53 @@
+{
+  "type": "tfc:damage_inputs_shaped_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ZXZ",
+      "YPC",
+      "BXP"
+    ],
+    "key": {
+      "Z": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "tag": "firmalife:foods/cheeses" 
+        }
+      },
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "tag": "firmalife:foods/slices" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "tfc:food/tomato" 
+        }
+      },
+      "C": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:cabbage_leaf" 
+        }
+      },
+      "P": {
+        "type":"tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:beef_patty" 
+        }
+      },
+      "B": {
+        "type":"tfc:not_rotten",
+        "ingredient": { 
+          "item": "firmalife:food/cooked_bacon" 
+        }
+      }
+    },
+    "result": {
+      "item": "delightful:deluxe_cheeseburger",
+      "count": 1
+    }
+  }
+}

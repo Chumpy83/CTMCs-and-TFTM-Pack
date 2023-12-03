@@ -1,0 +1,29 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "firmalife:mixing_bowl",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "tfc:foods/flour"
+      }
+    },
+    {
+      "tag": "forge:eggs"
+    },
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "firmalife:food/butter"
+      }
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "output_item": {
+    "item": "kubejs:cookie_dough",
+    "modifiers": [
+    "tfc:copy_food"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "ingredient": {
+    "item": "kubejs:raw_dumplings"
+  },
+  "hunger": 4,
+  "saturation": 0,
+  "decay_modifier": 2,
+  "grain": 1,
+  "protein": 1,
+  "vegetables": 1.5
+
+}

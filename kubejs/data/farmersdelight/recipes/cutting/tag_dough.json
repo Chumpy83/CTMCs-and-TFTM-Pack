@@ -1,0 +1,18 @@
+{
+  "replace": true,
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "tag": "tfc:foods/dough"
+    }
+  ],
+  "tool": {
+    "tag": "tfc:knives"
+  },
+  "result": [
+    {
+      "item": "kubejs:raw_pasta",
+      "count": 2
+    }
+  ]
+}

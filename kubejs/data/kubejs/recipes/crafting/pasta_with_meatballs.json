@@ -1,0 +1,41 @@
+{
+  "type": "tfc:damage_inputs_shaped_crafting",
+  "recipe": {
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "ZZZ",
+      "XYS",
+      " B "
+    ],
+    "key": {
+      "Z": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "firmalife:food/tomato_sauce" 
+        }
+      },
+      "X": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "farmersdelight:beef_patty" 
+        }
+      },
+      "Y": {
+        "type": "tfc:not_rotten",
+        "ingredient": { 
+          "item": "kubejs:pasta" 
+        }
+      },
+      "B": {
+        "tag": "tfc:bowls" 
+      },
+      "S": {
+        "item": "firmalife:spice/basil_leaves" 
+      }
+    },
+    "result": {
+      "item": "farmersdelight:pasta_with_meatballs",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:sheep",
+    "tfc:alpaca",
+    "tfc:goat",
+    "betteranimalsplus:boar",
+    "betteranimalsplus:deer",
+    "betteranimalsplus:lamprey",
+    "alexsmobs:gazelle",
+    "alexsmobs:alligator_snapping_turtle",
+    "alexsmobs:gorilla",
+    "alexsmobs:kangaroo",
+    "alexsmobs:platypus",
+    "alexsmobs:terrapin",
+    "naturalist:coral_snake",
+    "naturalist:snake"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "YXY",
+    " Z "
+  ],
+  "key":{
+    "X": {
+      "type": "tfc:fluid_item",
+      "fluid_ingredient": {
+        "ingredient": "firmalife:cream",
+        "amount": 1000
+      }
+    },
+    "Y": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "tag": "pluto:berries"
+      }
+    },
+    "Z": {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "farmersdelight:pie_crust"
+      }
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "farmersdelight:sweet_berry_cheesecake"
+  }
+}

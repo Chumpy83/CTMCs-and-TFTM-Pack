@@ -1,0 +1,26 @@
+{
+  "type": "tfc:extra_products_shapeless_crafting",
+  "extra_products": [
+    {
+      "item": "tfc:straw"
+    }
+  ],
+  "recipe": {
+    "type": "tfc:damage_inputs_shapeless_crafting",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "tag": "pluto:tea_plants"
+        },
+        {
+          "tag": "tfc:knives"
+        }
+      ],
+      "result": {
+        "item": "delightful:green_tea_leaf",
+        "count": 1
+      }
+    }
+  }
+}

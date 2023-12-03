@@ -1,0 +1,18 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "kubejs:kubejs:raw_honey_glazed_ham"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "farmersdelight:honey_glazed_ham_block"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}y

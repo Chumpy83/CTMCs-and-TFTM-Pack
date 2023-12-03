@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "kubejs:cookie_dough"
+      }
+    },
+    {
+      "item": "firmalife:raw_honey"
+    }
+  ],
+  "result": {
+      "item": "kubejs:honey_cookie_dough",
+      "count": 4
+  }
+}

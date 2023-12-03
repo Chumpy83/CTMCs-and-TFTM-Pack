@@ -1,0 +1,12 @@
+{
+  "ingredient": [
+    "kubejs:matcha_latte"
+  ],
+  "thirst": 10,
+  "food": {
+    "hunger": 0,
+    "saturation": 2,
+    "vegetables": 0.5,
+    "dairy": 0.25
+  }
+}

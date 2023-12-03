@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "kubejs:cooked_ham"
+  },
+  "hunger": 6,
+  "saturation": 3,
+  "decay_modifier": 1,
+  "protein": 4
+}

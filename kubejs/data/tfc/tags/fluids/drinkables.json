@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#tfc:infinite_water",
+    "#tfc:alcohols",
+    "#tfc:milks",
+    "kubejs:bone_broth",
+    "kubejs:melon_juice",
+    "kubejs:apple_juice",
+    "kubejs:matcha_tea",
+    "kubejs:matcha_latte"
+  ]
+}

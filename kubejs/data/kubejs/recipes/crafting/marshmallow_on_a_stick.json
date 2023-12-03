@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "type": "tfc:not_rotten",
+      "ingredient": {
+        "item": "kubejs:marshmallow"
+      }
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+      "item": "delightful:marshmallow_stick",
+      "count": 1
+  }
+}

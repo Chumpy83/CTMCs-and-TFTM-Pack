@@ -1,0 +1,11 @@
+{
+  "ingredient": [
+    "kubejs:apple_juice"
+  ],
+  "thirst": 10,
+  "food": {
+    "hunger": 0,
+    "saturation": 0,
+    "fruit": 1.0
+  }
+}

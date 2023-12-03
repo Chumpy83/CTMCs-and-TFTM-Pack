@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:powder/wood_ash",
+    "tfc:jute",
+    "farmersdelight:pumpkin_slice",
+    "kubejs:grub"
+  ]
+}

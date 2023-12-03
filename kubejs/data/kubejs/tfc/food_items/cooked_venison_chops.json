@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "delightful:cooked_venison_chops"
+  },
+  "hunger": 2,
+  "saturation": 1,
+  "decay_modifier": 1,
+  "protein": 1
+}

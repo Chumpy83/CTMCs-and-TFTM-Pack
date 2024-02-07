@@ -149,6 +149,9 @@
     },
     {
       "item": "betteranimalsplus:turkey_raw"
+    },
+    {
+      "item": "kubejs:snow_jug"
     }
   ],
   "heat_capacity": 1.0

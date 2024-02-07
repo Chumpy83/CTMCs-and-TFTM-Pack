@@ -1,0 +1,7 @@
+{
+  "parent": "kubejs:block/anvil",
+  "textures": {
+    "all": "kubejs:block/metal/anvil/netherite",
+    "particle": "kubejs:block/metal/anvil/netherite"
+  }
+}

@@ -83,6 +83,24 @@
     },
     {
       "item": "farmersdelight:ham"
+    },
+    {
+      "item": "kubejs:berry_cookie_dough"
+    },
+    {
+      "item": "kubejs:cooked_grilled_cheese"
+    },
+    {
+      "item": "kubejs:raw_grilled_cheese"
+    },
+    {
+      "item": "kubejs:raw_dumplings"
+    },
+    {
+      "item": "kubejs:raw_stuffed_pumpkin"
+    },
+    {
+      "item": "kubejs:raw_crab_rangoon"
     }
   ],
   "heat_capacity": 1.0

@@ -1,0 +1,12 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "kubejs:metal/sword/netherite"
+  },
+  "result_fluid": {
+    "fluid": "kubejs:metal/netherite",
+    "amount": 200
+  },
+  "temperature": 1700,
+  "use_durability": true
+}

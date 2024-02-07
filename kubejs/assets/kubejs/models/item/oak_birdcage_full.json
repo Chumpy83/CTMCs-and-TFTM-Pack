@@ -1,0 +1,8 @@
+{
+    "parent": "kubejs:item/oak_birdcage",
+    "textures": {
+        "layer0": "kubejs:item/birdcage/oak_birdcage",
+        "layer1": "kubejs:item/birdcage/full_cage_underlay",
+        "layer2": "kubejs:item/birdcage/full_cage_overlay"
+    }
+}

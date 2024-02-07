@@ -2,14 +2,6 @@
 
 console.info('Hello, World! (You will only see this line once in console, during startup)')
 
-onEvent('item.registry', event => {
-	// Register new items here
-	// event.create('example_item').displayName('Example Item')
-//	event.create('raw_game').displayName('Raw Game').parentModel('kubejs:item/venisonraw').texture('kubejs:item/venison_raw').food(food => {food.hunger(4).saturation(0)})
-//	event.create('cooked_game').displayName('Cooked Game').parentModel('kubejs:item/venisoncooked').texture('kubejs:item/venison_cooked').parentModel('kubejs:item/venisonraw').texture('kubejs:item/venison_raw').food(food => {food.hunger(4).saturation(2)})
-//	event.create('raw_fish').displayName('Raw Fish').parentModel('kubejs:item/crab_meat_raw').texture('kubejs:item/crab_meat_raw').parentModel('kubejs:item/venisonraw').texture('kubejs:item/venison_raw').food(food => {food.hunger(4).saturation(0)})
-//	event.create('cooked_fish').displayName('Cooked Fish').parentModel('kubejs:item/crab_meat_cooked').texture('kubejs:item/crab_meat_cooked').parentModel('kubejs:item/venisonraw').texture('kubejs:item/venison_raw').food(food => {food.hunger(4).saturation(1)})
-})
 onEvent('item.registry', event =>
 {
     
@@ -349,9 +341,62 @@ onEvent('item.registry', event =>
     event.create('raw_roast_chicken').displayName('Uncooked Roasted Chicken').parentModel('kubejs:item/roast_chicken').texture('kubejs:item/raw_roast_chicken')
     event.create('raw_pasta').displayName('Raw Pasta').parentModel('kubejs:item/raw_pasta').texture('kubejs:item/raw_pasta')
     event.create('earthworm').displayName('Earthworm').parentModel('kubejs:item/earthworm').texture('kubejs:item/earthworm')
+    event.create('taproot').displayName('Taproot').parentModel('kubejs:item/ediblerootitem').texture('kubejs:item/ediblerootitem')
+    event.create('rootball').displayName('Root Ball').parentModel('kubejs:item/rootball').texture('kubejs:item/rootball')
     event.create('grub').displayName('Grub').parentModel('kubejs:item/silkworm').texture('kubejs:item/silkworm')
+    event.create('snow_jug').displayName('Ceramic Jug Of Snow').parentModel('tfc:item/ceramic/jug').texture('tfc:item/ceramic/jug_empty').maxStackSize(1).tooltip("A jug full of snow - combine with a torch to melt the snow inside.").maxStackSize(1)
+    event.create('metal/file_head/wrought_iron').displayName('Wrought Iron File Head').parentModel('item/metal/file_head/wrought_iron').texture('item/metal/file_head/wrought_iron').maxStackSize(1)
+    event.create('metal/file_head/steel').displayName('Steel File Head').parentModel('item/metal/file_head/steel').texture('item/metal/file_head/steel').maxStackSize(1)
+    event.create('metal/file_head/black_steel').displayName('Black Steel File Head').parentModel('item/metal/file_head/black_steel').texture('item/metal/file_head/black_steel').maxStackSize(1)
+    event.create('metal/file_head/red_steel').displayName('Red Steel File Head').parentModel('item/metal/file_head/red_steel').texture('item/metal/file_head/red_steel').maxStackSize(1)
+    event.create('metal/file_head/blue_steel').displayName('Blue Steel File Head').parentModel('item/metal/file_head/blue_steel').texture('item/metal/file_head/blue_steel').maxStackSize(1)
+    event.create('metal/file/wrought_iron').displayName('Wrought Iron File').parentModel('item/metal/file/wrought_iron').texture('item/metal/file/wrought_iron').maxStackSize(1)
+    event.create('metal/file/steel').displayName('Steel File').parentModel('item/metal/file/steel').texture('item/metal/file/steel').maxStackSize(1)
+    event.create('metal/file/black_steel').displayName('Black Steel File').parentModel('item/metal/file/black_steel').texture('item/metal/file/black_steel').maxStackSize(1)
+    event.create('metal/file/red_steel').displayName('Red Steel File').parentModel('item/metal/file/red_steel').texture('item/metal/file/red_steel').maxStackSize(1)
+    event.create('metal/file/blue_steel').displayName('Blue Steel File').parentModel('item/metal/file/blue_steel').texture('item/metal/file/blue_steel').maxStackSize(1)
+    event.create('metal/bolt/wrought_iron').displayName('Small Wrought Iron Stick').parentModel('item/metal/bolt/wrought_iron').texture('item/metal/bolt/wrought_iron').maxStackSize(32)
+    event.create('metal/bolt/steel').displayName('Small Steel Bolt Stick').parentModel('item/metal/bolt/steel').texture('item/metal/bolt/steel').maxStackSize(32)
+    event.create('metal/bolt/bolt_wrought_iron').displayName('Wrought Iron bolt').parentModel('item/metal/bolt/bolt_wrought_iron').texture('item/metal/bolt/bolt_wrought_iron').maxStackSize(32)
+    event.create('metal/bolt/bolt_steel').displayName('Steel bolt').parentModel('item/metal/bolt/bolt_steel').texture('item/metal/bolt/bolt_steel').maxStackSize(32)
+    /*
+    event.create('acacia_birdcage').displayName('Acacia Birdcage').parentModel('kubejs:item/ash_birdcage').maxStackSize(1)
+    event.create('ash_birdcage').displayName('Ash Birdcage').parentModel('kubejs:item/ash_birdcage').texture('kubejs:item/ash_birdcage').maxStackSize(1)
+    event.create('aspen_birdcage').displayName('Aspen Birdcage').parentModel('kubejs:item/aspen_birdcage').texture('kubejs:item/aspen_birdcage').maxStackSize(1)
+    event.create('birch_birdcage').displayName('Birch Birdcage').parentModel('kubejs:item/birch_birdcage').texture('kubejs:item/birch_birdcage').maxStackSize(1)
+    event.create('blackwood_birdcage').displayName('Blackwood Birdcage').parentModel('kubejs:item/blackwood_birdcage').texture('kubejs:item/blackwood_birdcage').maxStackSize(1)
+    event.create('chestnut_birdcage').displayName('Chestnut Birdcage').parentModel('kubejs:item/chestnut_birdcage').texture('kubejs:item/chestnut_birdcage').maxStackSize(1)
+    event.create('douglas_fir_birdcage').displayName('Douglas Fir Birdcage').parentModel('kubejs:item/douglas_fir_birdcage').texture('kubejs:item/douglas_fir_birdcage').maxStackSize(1)
+    event.create('hickory_birdcage').displayName('Hickory Birdcage').parentModel('kubejs:item/hickory_birdcage').texture('kubejs:item/hickory_birdcage').maxStackSize(1)
+    event.create('kapok_birdcage').displayName('Kapok Birdcage').parentModel('kubejs:item/kapok_birdcage').texture('kubejs:item/kapok_birdcage').maxStackSize(1)
+    event.create('maple_birdcage').displayName('Maple Birdcage').parentModel('kubejs:item/maple_birdcage').texture('kubejs:item/maple_birdcage').maxStackSize(1)
+    event.create('oak_birdcage').displayName('Oak Birdcage').parentModel('kubejs:item/oak_birdcage').texture('kubejs:item/oak_birdcage').maxStackSize(1)
+    event.create('palm_birdcage').displayName('Palm Birdcage').parentModel('kubejs:item/palm_birdcage').texture('kubejs:item/palm_birdcage').maxStackSize(1)
+    event.create('pine_birdcage').displayName('Pine Birdcage').parentModel('kubejs:item/pine_birdcage').texture('kubejs:item/pine_birdcage').maxStackSize(1)
+    event.create('rosewood_birdcage').displayName('Rosewood Birdcage').parentModel('kubejs:item/rosewood_birdcage').texture('kubejs:item/rosewood_birdcage').maxStackSize(1)
+    event.create('sequoia_birdcage').displayName('Sequoia Birdcage').parentModel('kubejs:item/sequoia_birdcage').texture('kubejs:item/sequoia_birdcage').maxStackSize(1)
+    event.create('spruce_birdcage').displayName('Spruce Birdcage').parentModel('kubejs:item/spruce_birdcage').texture('kubejs:item/spruce_birdcage').maxStackSize(1)
+    event.create('sycamore_birdcage').displayName('Sycamore Birdcage').parentModel('kubejs:item/sycamore_birdcage').texture('kubejs:item/sycamore_birdcage').maxStackSize(1)
+    event.create('white_cedar_birdcage').displayName('White Cedar Birdcage').parentModel('kubejs:item/white_cedar_birdcage').texture('kubejs:item/white_cedar_birdcage').maxStackSize(1)
+    event.create('willow_birdcage').displayName('Willow Birdcage').parentModel('kubejs:item/willow_birdcage').texture('kubejs:item/willow_birdcage').maxStackSize(1)
+    event.create('eucalyptus_birdcage').displayName('Eucalyptus Birdcage').parentModel('kubejs:item/eucalyptus_birdcage').texture('kubejs:item/eucalyptus_birdcage').maxStackSize(1)
+    event.create('mahogany_birdcage').displayName('Mahogany Birdcage').parentModel('kubejs:item/mahogany_birdcage').texture('kubejs:item/mahogany_birdcage').maxStackSize(1)
+    event.create('baobab_birdcage').displayName('Baobab Birdcage').parentModel('kubejs:item/baobab_birdcage').texture('kubejs:item/baobab_birdcage').maxStackSize(1)
+    event.create('hevea_birdcage').displayName('Hevea Birdcage').parentModel('kubejs:item/hevea_birdcage').texture('kubejs:item/hevea_birdcage').maxStackSize(1)
+    event.create('tualang_birdcage').displayName('Tualang Birdcage').parentModel('kubejs:item/tualang_birdcage').texture('kubejs:item/tualang_birdcage').maxStackSize(1)
+    event.create('teak_birdcage').displayName('Teak Birdcage').parentModel('kubejs:item/teak_birdcage').texture('kubejs:item/teak_birdcage').maxStackSize(1)
+    event.create('cypress_birdcage').displayName('Cypress Birdcage').parentModel('kubejs:item/cypress_birdcage').texture('kubejs:item/cypress_birdcage').maxStackSize(1)
+    event.create('fig_birdcage').displayName('Fig Birdcage').parentModel('kubejs:item/fig_birdcage').texture('kubejs:item/fig_birdcage').maxStackSize(1)
+    */
 })
-onEvent('block.registry', event => {
-	// Register new blocks here
-	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
+    onEvent('tfc.data', event => {
+        //adding fertilizer values to other composts/fertilizers
+        event.addTFCFertilizer('thermal:phytogro', 'n=0.25, p=0.5, k=0.25')
+        event.addTFCFertilizer('minecolonies:compost', 'n=0.4, p=0.2, k=0.4')
+
+})    
+    onEvent('block.registry', event => {
+        event.create('limesand').material('sand').hardness(1.0).displayName('Limesand').tagBlock('minecraft:mineable/shovel')
+	    // Register new blocks here
+	    // event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
 })

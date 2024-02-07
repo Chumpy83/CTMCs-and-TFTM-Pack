@@ -12,6 +12,5 @@
 })*/
 onEvent('block.place', event => {
   if (event.block == 'tfc:torch' && event.level.dimension == 'agape:moon_surface')
-  //event.level.destroyBlock(event.block.pos, false);
   event.block.set('tfc:dead_torch');
 })

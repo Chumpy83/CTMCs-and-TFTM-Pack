@@ -1,0 +1,8 @@
+{
+    "parent": "exoticbirds:item/gold_birdcage",
+    "textures": {
+        "layer0": "exoticbirds:item/birdcage/gold_birdcage",
+        "layer1": "exoticbirds:item/birdcage/full_cage_underlay",
+        "layer2": "exoticbirds:item/birdcage/full_cage_overlay"
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "loader": "forge:separate-perspective",
+  "gui_light": "front",
+  "overrides": [
+    {
+      "predicate": {
+        "tfc:throwing": 1
+      },
+      "model": "kubejs:item/metal/javelin/netherite_throwing"
+    }
+  ],
+  "base": {
+    "parent": "kubejs:item/metal/javelin/netherite_in_hand"
+  },
+  "perspectives": {
+    "none": {
+      "parent": "kubejs:item/metal/javelin/netherite_in_gui"
+    },
+    "fixed": {
+      "parent": "kubejs:item/metal/javelin/netherite_in_gui"
+    },
+    "ground": {
+      "parent": "kubejs:item/metal/javelin/netherite_in_gui"
+    },
+    "gui": {
+      "parent": "kubejs:item/metal/javelin/netherite_in_gui"
+    }
+  }
+}

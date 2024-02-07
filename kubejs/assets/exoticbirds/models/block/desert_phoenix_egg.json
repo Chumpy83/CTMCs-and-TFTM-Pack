@@ -1,0 +1,7 @@
+{
+  "parent": "exoticbirds:block/phoenix_egg",
+  "textures": {
+    "particle": "exoticbirds:block/desert_phoenix_egg",
+    "all": "exoticbirds:block/desert_phoenix_egg"
+  }
+}

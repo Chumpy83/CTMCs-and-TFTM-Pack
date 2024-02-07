@@ -1,0 +1,20 @@
+{
+   "variants": {
+      "eggs=0,facing=south": {"model": "exoticbirds:block/nest_empty", "y": 0 },
+      "eggs=0,facing=west": {"model": "exoticbirds:block/nest_empty", "y": 90 },
+      "eggs=0,facing=north": {"model": "exoticbirds:block/nest_empty", "y": 180 },
+      "eggs=0,facing=east": {"model": "exoticbirds:block/nest_empty", "y": 270 },
+      "eggs=1,facing=south": {"model": "exoticbirds:block/nest_one_egg", "y": 0 },
+      "eggs=1,facing=west": {"model": "exoticbirds:block/nest_one_egg", "y": 90 },
+      "eggs=1,facing=north": {"model": "exoticbirds:block/nest_one_egg", "y": 180 },
+      "eggs=1,facing=east": {"model": "exoticbirds:block/nest_one_egg", "y": 270 },
+      "eggs=2,facing=south": {"model": "exoticbirds:block/nest_two_eggs", "y": 0 },
+      "eggs=2,facing=west": {"model": "exoticbirds:block/nest_two_eggs", "y": 90 },
+      "eggs=2,facing=north": {"model": "exoticbirds:block/nest_two_eggs", "y": 180 },
+      "eggs=2,facing=east": {"model": "exoticbirds:block/nest_two_eggs", "y": 270 },
+      "eggs=3,facing=south": {"model": "exoticbirds:block/nest_three_eggs", "y": 0 },
+      "eggs=3,facing=west": {"model": "exoticbirds:block/nest_three_eggs", "y": 90 },
+      "eggs=3,facing=north": {"model": "exoticbirds:block/nest_three_eggs", "y": 180 },
+      "eggs=3,facing=east": {"model": "exoticbirds:block/nest_three_eggs", "y": 270 }
+   }
+}

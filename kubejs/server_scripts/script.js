@@ -4,12 +4,10 @@ settings.logAddedRecipes = true
 settings.logRemovedRecipes = true
 settings.logSkippedRecipes = false
 settings.logErroringRecipes = true
-//import mods.terrafirmacraft.tfc:heating;
 
 console.info('Hello, World! (You will see this line every time server resources reload)')
 
 //Add crafter recipes
-
 onEvent('server.datapack.last', event => {
 	console.log('datapack last event triggered')
 	event.addJson('tfc:crafterrecipes/farmer/daub.json',
@@ -26,8 +24,6 @@ onEvent('server.datapack.last', event => {
 		"intermediate": "minecraft:air"
 	  })
 	})
-
-//tags adding, making tfc dirt usable by minecolonies farmers, thatch beds usable in schematics as citizen beds,
 onEvent('item.tags', event => {
 	event.add('forge:sapling', ['tfc:wood/sapling/acacia', 'tfc:wood/sapling/ash',		'tfc:wood/sapling/aspen',		'tfc:wood/sapling/birch',
 		'tfc:wood/sapling/blackwood',
@@ -46,27 +42,24 @@ onEvent('item.tags', event => {
 		'tfc:wood/sapling/white_cedar',
 		'tfc:wood/sapling/willow'
 	])
-
+//tags adding, making tfc dirt usable by minecolonies farmers, thatch beds usable in schematics as citizen beds,
 	event.add('forge:dirt', [
 		'tfc:dirt/loam',
 		'tfc:dirt/silt',
 		'tfc:dirt/silty_loam',
 		'tfc:dirt/sandy_loam'
 	])
-
+//makes thatch beds usable by villagers if they're in a schematic
 	event.add('minecraft:beds', 'tfc:thatch_bed')
-/*
+//makes seeds usable by minecolonies farms
 	event.add('forge:seeds', [
-		'tfc:seeds/barley',
-		'tfc:seeds/corn',
-		'tfc:seeds/oat',
-		'tfc:seeds/rice',
-		'tfc:seeds/rye',
-		'tfc:seeds/wheat'
-	])*/
+		'tfc:seeds/barley', 'tfc:seeds/maize', 'tfc:seeds/oat', 'tfc:seeds/rice', 'tfc:seeds/rye',
+		'tfc:seeds/wheat', 'tfc:seeds/beet', 'tfc:seeds/cabbage', 'tfc:seeds/carrot', 'tfc:seeds/garlic',
+		'tfc:seeds/onion', 'tfc:seeds/potato', 'tfc:seeds/pumpkin', 'tfc:seeds/green_bean', 'tfc:seeds/soybean',
+		'tfc:seeds/sugarcane', 'tfc:seeds/tomato', 'tfc:seeds/squash', 'tfc:seeds/jute', 'tfc:seeds/papyrus',
+		'tfc:seeds/melon'
+	])
 })
-
-
 onEvent('recipes', e => {
 	// 2x slabs -> 1x plank through shaped crafting
 	e.forEachRecipe({ type: 'minecraft:crafting_shaped', output: '#minecraft:slabs' }, r => {
@@ -79,7 +72,6 @@ onEvent('recipes', e => {
 	)))
 	})  })
 onEvent('recipes', event => {
-
 	const replacements = [
 		{ mod: 'minecolonies', input: 'minecraft:iron_ingot', replace: '#forge:ingots' },
 		{ input: 'minecraft:egg', replace: '#forge:eggs' },
@@ -103,21 +95,13 @@ onEvent('recipes', event => {
 		{ mod: 'minecolonies', input: 'minecraft:torch', replace: 'tfc:torch' },
 		{ mod: 'minecolonies', input: 'minecraft:barrel', replace: '#tfc:barrels' },
 		{ mod: 'minecolonies', input: 'minecraft:stone_bricks', replace: '#forge:stone_bricks' }
-	];
-
-	replacements.forEach(r => {
-		event.replaceInput({
-			mod: r.mod,
-			input: r.input
-		}, r.input, r.replace);
-	});
-
-});
-
+	]
+})
 //items removed, all to be added back later except for the enchanter - all done because force-changing recipes with items in them are tricky, 
 //easier to remove and re add with new recipe
 onEvent('recipes', event => {
 	event.remove({ id: 'minecolonies:blockhutfisherman', mod: 'minecolonies'}),
+	event.remove({ id: 'minecolonies:blockhutbeekeeper', mod: 'minecolonies'})
 	event.remove({ id: 'minecolonies:blockhutblacksmith', mod: 'minecolonies'}),
 	event.remove({ id: 'minecolonies:blockhutbarracks', mod: 'minecolonies'}),
 	event.remove({ id: 'minecolonies:blockhutcombatacademy', mod: 'minecolonies'}),
@@ -143,24 +127,44 @@ onEvent('recipes', event => {
 )
 
 onEvent('recipes', event => {
+	const gem = ['amethyst', 'diamond', 'emerald', 'lapis_lazuli', 'opal', 'pyrite', 'ruby', 'sapphire', 'topaz']
+	gem.forEach(g => {
+		event.recipes.tfc.damage_inputs_shapeless_crafting(event.shapeless('tfc:gem/'+g, [
+			'tfc:ore/'+g,
+			'#tfc:hammers',
+			'#tfc:chisels']
+			))}),
 	event.recipes.tfc.alloy('tfc_metallum:andesite_alloy', [
 		['tfc_ie_addon:lead', 0.6, 0.7],
-	 ['tfc:zinc', 0.15, 0.25],
-	 ['tfc:nickel', 0.15, 0.25]
- 	]),
- 	event.recipes.tfc.damage_inputs_shapeless_crafting(event.shapeless('4x create:andesite_alloy', [
-	 'tfc_metallum:metal/ingot/andesite_alloy',
-	 '#tfc:hammers',
-	 '#tfc:chisels']
+		['tfc:zinc', 0.15, 0.25],
+		['tfc:nickel', 0.15, 0.25]
+	]),
+	event.recipes.tfc.damage_inputs_shapeless_crafting(event.shapeless('kubejs:limesand', [
+		'tfc:rock/gravel/limestone',
+		'#tfc:hammers']
+	)),
+	event.recipes.tfc.damage_inputs_shapeless_crafting(event.shapeless('2x tfc:powder/flux', [
+		'tfc:calcite',
+		'#tfc:hammers']
+	)),      
+	event.recipes.tfc.damage_inputs_shapeless_crafting(event.shapeless('4x create:andesite_alloy', [
+		'tfc_metallum:metal/ingot/andesite_alloy',
+		'#tfc:hammers',
+		'#tfc:chisels']
+	)),
+	event.recipes.tfc.damage_inputs_shapeless_crafting(event.shapeless('4x minecraft:netherite_scrap', [
+		'kubejs:metal/ingot/netherite',
+		'#tfc:hammers',
+		'#tfc:chisels']
 	)),
 	event.recipes.tfc.damage_inputs_shaped_crafting('minecraft:dried_kelp_block', [
 		'SHS',
 		'SSS',
 		'SSS'
-	  ], {
+	], {
 		S: 'tfc:food/dried_kelp',
 		H: '#tfc:hammers'
-	  })
+	})
 	event.recipes.tfc.damage_inputs_shaped_crafting('create:belt_connector', [
 		' H ',
 		'SSS',
@@ -174,11 +178,21 @@ onEvent('recipes', event => {
 		[  'GP',
 		   'NG'],
 			{ 
-				  P: 'tfc:metal/sheet/tin',
-				  N: 'chemlib:tin_nugget',
-				  G: 'tfc:glue'
+				P: 'tfc:metal/sheet/tin',
+				N: 'chemlib:tin_nugget',
+				G: 'tfc:glue'
 			}
-		),	  
+		),
+	event.shaped(
+		Item.of('create_things_and_misc:glue_packaging',1),
+		[' P',
+		 'N '],
+		{ 
+				P: 'tfc:metal/sheet/tin',
+				N: 'chemlib:tin_nugget'
+				}
+			),
+////////					  
     event.shaped(
 		Item.of('createchunkloading:chunk_loader',1),
 	[  	'RGR',
@@ -320,7 +334,9 @@ onEvent('recipes', event => {
 	      L: 'structurize:sceptergold',
 		  D: '#forge:swords'
 		}
-	),
+	)
+})
+onEvent('recipes', event => {
 	event.shaped(
 		Item.of('minecolonies:blockhutlumberjack',2),
 		[  'XLX',
@@ -401,9 +417,31 @@ onEvent('recipes', event => {
 		}
 	),
 	event.shaped(
+		Item.of('minecolonies:blockhutbaker'),
+		[  'XLX',
+	       'XDX',
+		   'XXX'],
+		{ 
+		  X: '#minecraft:planks',
+	      L: 'structurize:sceptergold',
+		  D: '#tfc:foods/grains'
+		}
+	),
+	event.shaped(
+		Item.of('minecolonies:blockhutbeekeeper'),
+		[  'XLX',
+	       'XDX',
+		   'XXX'],
+		{ 
+		  X: '#minecraft:planks',
+	      L: 'structurize:sceptergold',
+		  D: 'firmalife:beehive'
+		}
+	),
+	event.shaped(
 		Item.of('minecraft:book',1),
 		[  'XX ',
-	       'XS',
+	       'XS ',
 		   '   '],
 		{ 
 		  X: 'minecraft:paper',
@@ -445,7 +483,7 @@ onEvent('recipes', event => {
 	event.shaped(
 		Item.of('structurize:sceptergold',1),
 		[  '  D',
-	       ' x ',
+	       ' X ',
 		   'X  '],
 		{ 
 			X: '#forge:rods/wooden',
@@ -518,6 +556,160 @@ onEvent('recipes', event => {
 		}
 	)
 	event.shaped(
+		Item.of('computercraft:pocket_computer_normal',1),
+		[  'SSS',
+	       'SCS',
+		   'SPS'],
+		{ 
+			S: 'pneumaticcraft:plastic',
+			C: 'pneumaticcraft:printed_circuit_board',
+			P: 'minecraft:glass_pane',
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:pocket_computer_advanced',1),
+		[  'SSS',
+	       'SCS',
+		   'SPS'],
+		{ 
+			S: 'immersiveengineering:plate_electrum',
+			C: 'computercraft:pocket_computer_normal',
+			P: 'ae2:advanced_card',
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:turtle_normal',1),
+		[  'RPR',
+	       'SCD',
+		   'RJR'],
+		{ 
+			S: '#forge:chests',
+			C: 'computercraft:computer_normal',
+			D: 'create:deployer',
+			J: 'mekanism:jetpack',
+			R: 'tfc_metallum:metal/rod/titanium',
+			P: 'tfc_metalwork:metal/plate/titanium'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:turtle_advanced',1),
+		[  'RPR',
+	       'PTP',
+		   'RCR'],
+		{ 
+			T: 'computercraft:turtle_normal',
+			C: 'computercraft:computer_advanced',
+			R: 'kubejs:metal/rod/netherite',
+			P: 'kubejs:metal/sheet/netherite'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:turtle_advanced',1),
+		[  'RPR',
+	       'SCD',
+		   'RJR'],
+		{ 
+			S: '#forge:chests',
+			C: 'computercraft:computer_advanced',
+			D: 'create:deployer',
+			J: 'mekanism:jetpack',
+			R: 'kubejs:metal/rod/netherite',
+			P: 'kubejs:metal/sheet/netherite'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:speaker',1),
+		[  'SSS',
+	       'SNS',
+		   'SRS'],
+		{ 
+			S: 'tfc_metalwork:metal/plate/wrought_iron',
+			N: 'minecraft:note_block',
+			R: 'minecraft:redstone'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:disk_drive',1),
+		[  'SSS',
+	       'SNS',
+		   'SRS'],
+		{ 
+			S: 'tfc_metalwork:metal/plate/wrought_iron',
+			N: 'mekanism:basic_control_circuit',
+			R: 'minecraft:redstone'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:printer',1),
+		[  'SSS',
+	       'CTM',
+		   'YNB'],
+		{ 
+			S: 'tfc_metalwork:metal/plate/wrought_iron',
+			C: 'minecraft:cyan_dye',
+			T: 'create:fluid_tank',
+			M: 'minecraft:magenta_dye',
+			Y: 'minecraft:yellow_dye',
+			N: 'mekanism:basic_control_circuit',
+			B: 'minecraft:black_dye'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:monitor_normal',1),
+		[  'RSR',
+	       'SPS',
+		   'RDR'],
+		{ 
+			S: 'tfc_metalwork:metal/plate/wrought_iron',
+			R: 'tfc:metal/rod/wrought_iron',
+			D: 'minecraft:redstone',
+			P: 'minecraft:glass_pane'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:monitor_advanced',1),
+		[  'RSR',
+	       'SPS',
+		   'RSR'],
+		{ 
+			S: 'immersiveengineering:plate_electrum',
+			R: 'tfc_metallum:metal/rod/electrum',
+			P: 'minecraft:glass_pane'
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:wireless_modem_normal',1),
+		[  ' R ',
+	       'SCS',
+		   ' S '],
+		{ 
+			S: 'tfc_metalwork:metal/plate/wrought_iron',
+			R: 'tfc:metal/rod/copper',
+			C: 'ae2:basic_card',
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:wireless_modem_advanced',1),
+		[  ' R ',
+	       'SPS',
+		   ' S '],
+		{ 
+			S: 'immersiveengineering:plate_electrum',
+			R: 'ae2:wireless_receiver',
+			P: 'ae2:advanced_card',
+		}
+	)
+	event.shaped(
+		Item.of('computercraft:wired_modem',1),
+		[  ' S ',
+	       'SRS',
+		   ' S '],
+		{ 
+			S: 'immersiveengineering:plate_electrum',
+			R: 'tfc:metal/rod/copper'
+		}
+	)
+	event.shaped(
 		Item.of('create:gantry_carriage',1),
 		[  ' S ',
 	       'RCR',
@@ -529,7 +721,425 @@ onEvent('recipes', event => {
 			R: 'tfc:metal/rod/wrought_iron',
 		}
 	)
+	//alchemistry tweaks
+	event.shaped(
+		Item.of('alchemistry:atomizer',1),
+		[  'RSR',
+	       'TCS',
+		   'RSR'],
+		{ 
+			S: 'kubejs:metal/sheet/netherite',
+			C: 'ae2:annihilation_core',
+			T: 'create:fluid_tank',
+			R: 'kubejs:metal/rod/netherite',
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:compactor',1),
+		[  'RSR',
+	       'TCS',
+		   'RSR'],
+		{ 
+			S: 'kubejs:metal/sheet/netherite',
+			C: 'ae2:formation_core',
+			T: 'create:fluid_tank',
+			R: 'kubejs:metal/rod/netherite'
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:combiner',1),
+		[  'RSR',
+	       'CTC',
+		   'RSR'],
+		{ 
+			S: 'kubejs:metal/sheet/netherite',
+			C: 'ae2:formation_core',
+			T: 'create:fluid_tank',
+			R: 'kubejs:metal/rod/netherite'
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:dissolver',1),
+		[  'RSR',
+	       'CTC',
+		   'RSR'],
+		{ 
+			S: 'kubejs:metal/sheet/netherite',
+			C: 'ae2:annihilation_core',
+			T: 'create:fluid_tank',
+			R: 'kubejs:metal/rod/netherite'
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:liquifier',1),
+		[  'RSR',
+	       'TCT',
+		   'RSR'],
+		{ 
+			S: 'kubejs:metal/sheet/netherite',
+			C: 'ae2:formation_core',
+			T: 'create:fluid_tank',
+			R: 'kubejs:metal/rod/netherite'
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:fission_chamber_controller',1),
+		[  'RSR',
+	       'GCP',
+		   'RSR'],
+		{ 
+			G: 'alchemistry:reactor_glass',
+			C: 'ae2:annihilation_core',
+			P: 'agape_space:shard_power',
+			R: 'kubejs:metal/rod/netherite',
+			S: 'alchemistry:reactor_casing'
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:fusion_chamber_controller',1),
+		[  'RSR',
+	       'GCP',
+		   'RSR'],
+		{ 
+			G: 'alchemistry:reactor_glass',
+			C: 'ae2:formation_core',
+			P: 'agape_space:shard_power',
+			R: 'kubejs:metal/rod/netherite',
+			S: 'alchemistry:reactor_casing'
+		}
+	)
+	event.shaped(
+		Item.of('alchemistry:reactor_energy',1),
+		[  'RSR',
+	       'SPS',
+		   'RSR'],
+		{ 
+			P: 'immersiveengineering:connector_hv',
+			R: 'kubejs:metal/rod/netherite',
+			S: 'alchemistry:reactor_casing'
+		}
+	)
+	event.shaped(
+		Item.of('buildinggadgets:gadget_building',1),
+		[  'RWR',
+	       'CPC',
+		   'RSR'],
+		{ 
+			W: 'ae2:wireless_receiver',
+			R: 'tfc_metallum:metal/rod/aluminum',
+			P: 'ae2:logic_processor',
+			C: 'ae2:formation_core',
+			S: 'tfc_metallum:metal/sheet/aluminum'
+		}
+	)
+	event.shaped(
+		Item.of('buildinggadgets:gadget_exchanging',1),
+		[  'RWR',
+	       'DPC',
+		   'RSR'],
+		{ 
+			W: 'ae2:wireless_receiver',
+			R: 'tfc_metallum:metal/rod/aluminum',
+			P: 'ae2:logic_processor',
+			C: 'ae2:formation_core',
+			D: 'ae2:annihilation_core',
+			S: 'tfc_metallum:metal/sheet/aluminum'
+		}
+	)
+	event.shaped(
+		Item.of('buildinggadgets:gadget_destruction',1),
+		[  'RWR',
+	       'DPD',
+		   'RSR'],
+		{ 
+			W: 'ae2:wireless_receiver',
+			R: 'tfc_metallum:metal/rod/aluminum',
+			P: 'ae2:logic_processor',
+			D: 'ae2:annihilation_core',
+			S: 'tfc_metallum:metal/sheet/aluminum'
+		}
+	)
+	event.shaped(
+		Item.of('buildinggadgets:gadget_copy_paste',1),
+		[  'RWR',
+	       'CPC',
+		   'RMR'],
+		{ 
+			W: 'ae2:wireless_receiver',
+			R: 'tfc_metallum:metal/rod/aluminum',
+			P: 'ae2:logic_processor',
+			C: 'ae2:formation_core',
+			M: 'ae2:memory_card'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:wall',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'minecraft:netherite_block',
+			E: 'minecraft:ender_eye'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_tiny',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'minecraft:nether_star'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_small',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'compactmachines:machine_tiny'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_normal',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'compactmachines:machine_small'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_large',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'compactmachines:machine_normal'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_giant',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'compactmachines:machine_large'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_maximum',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'compactmachines:machine_giant'
+		}
+	)
+	event.shaped(
+		Item.of('compactmachines:machine_maximum',1),
+		[  'NNN',
+	       'NEN',
+		   'NNN'],
+		{ 
+			N: 'compactmachines:wall',
+			E: 'compactmachines:machine_giant'
+		}
+	)
+	event.shaped(
+		Item.of('vs_eureka:engine',1),
+		[  'RTR',
+	       'CFC',
+		   'RPR'],
+		{ 
+			R: 'tfc:metal/rod/steel', 
+			T: 'tfc:metal/tuyere/steel',
+			F: 'create:propeller',
+			C: 'immersiveengineering:component_steel',
+			P: 'tfc_metalwork:metal/plate/steel'
+		}
+	)
+	const wHelm = ["oak", "spruce", "birch", "acacia"]
+	wHelm.forEach(wood => {event.recipes.tfc.damage_inputs_shaped_crafting(
+		event.shaped(
+		Item.of('vs_eureka:'+wood+'_ship_helm',1),
+			['HT ',
+	         'CFC',
+		     'RSR'],
+		{ 
+			R: 'immersiveengineering:wirecoil_structure_rope', 
+			T: 'create:shaft',
+			H: '#tfc:hammers',
+			F: 'astikorcarts:wheel/'+wood,
+			C: 'create:wooden_bracket',
+			S: 'tfc:wood/planks/'+wood+'_slab'
+		}
+	))})
+	event.shaped(
+		Item.of('vs_eureka:balloon',1),
+		[  ' M ',
+		   'MGM',
+		   ' M '],
+		{ 
+			M: 'minecraft:leather', 
+			G: 'tfc:glue'
+		}
+	)
+	event.shaped(
+		Item.of('vs_eureka:balloon',1),
+		[  'MMM',
+		   'MGM',
+		   'MMM'],
+		{ 
+			M: 'minecraft:paper', 
+			G: 'tfc:glue'
+		}
+	),
+	event.shaped('minecraft:observer', [
+		'RPR',
+		'BCW',
+		'RLR'
+	], {
+		R: 'tfc_metallum:metal/rod/andesite_alloy',
+		P: 'tfc_metalwork:metal/plate/andesite_alloy',
+		B: 'mekanism:energy_tablet',
+		C: 'ae2:logic_processor',
+		W: 'rosia:copper_wire',
+		L: '#forge:lens'
 	})
+	event.shaped('minecraft:nether_star', [
+		' L ',
+		'PEC',
+		' R '
+	], {
+		E: 'minecraft:ender_eye',
+		L: 'agape_space:shard_living',
+		P: 'agape_space:shard_power',
+		C: 'agape_space:shard_cold',
+		R: 'agape_space:shard_radiant'
+	})
+	event.shaped('exnihilosequentia:wooden_crook', [
+		' SS',
+		'  S',
+		'  S'
+	], {
+		S: '#forge:rods/wooden'
+	})
+	event.shaped('exoticbirds:bird_book', [
+		'SSS',
+		'SBS',
+		'SSS'
+	], {
+		S: '#forge:feathers',
+		B: 'minecraft:book'
+	})
+	event.shaped('exoticbirds:nest', [
+		'S S',
+		' S ',
+		'   '
+	], {
+		S: '#forge:rods/wooden'
+	})
+	event.shaped('exoticbirds:ambrosia', [
+		'SB ',
+		'H  ',
+		'   '
+	], {
+		S: '#forge:fruits',
+		B: '#forge:fruits/berries',
+		H: '#forge:honey'
+	})
+	event.shaped('exoticbirds:egg_incubator', [
+		'RLR',
+		'SNS',
+		'RBR'
+	], {
+		R: 'tfc:metal/rod/wrought_iron',
+		S: 'tfc:metal/sheet/wrought_iron',
+		L: '#forge:glass_panes',
+		N: 'exoticbirds:nest',
+		B: 'immersiveengineering:furnace_heater'
+	})
+	event.shaped('exoticbirds:egg_identifier', [
+		'RLR',
+		'S S',
+		'RBR'
+	], {
+		R: 'tfc:metal/rod/wrought_iron',
+		S: 'tfc:metal/sheet/wrought_iron',
+		L: '#forge:lens',
+		B: 'minecraft:redstone_lamp'
+	})
+	event.shaped('exoticbirds:acacia_birdcage', [
+		' B ',
+		'BSB',
+		'PPP'
+	], {
+		B: 'minecraft:iron_bars',
+		S: '#forge:rods/wooden',
+		P: 'tfc:wood/planks/acacia_slab'
+	})
+	event.shaped('exoticbirds:birch_birdcage', [
+		' B ',
+		'BSB',
+		'PPP'
+	], {
+		B: 'minecraft:iron_bars',
+		S: '#forge:rods/wooden',
+		P: 'tfc:wood/planks/birch_slab'
+	})
+	event.shaped('exoticbirds:oak_birdcage', [
+		' B ',
+		'BSB',
+		'PPP'
+	], {
+		B: 'minecraft:iron_bars',
+		S: '#forge:rods/wooden',
+		P: 'tfc:wood/planks/oak_slab'
+	})
+	event.shaped('exoticbirds:spruce_birdcage', [
+		' B ',
+		'BSB',
+		'PPP'
+	], {
+		B: 'minecraft:iron_bars',
+		S: '#forge:rods/wooden',
+		P: 'tfc:wood/planks/spruce_slab'
+	})
+	event.shaped('exoticbirds:iron_birdcage', [
+		' B ',
+		'BSB',
+		'PPP'
+	], {
+		B: 'minecraft:iron_bars',
+		S: '#forge:rods/wooden',
+		P: 'tfc_metalwork:metal/plate/wrought_iron'
+	})
+	event.shaped('exoticbirds:gold_birdcage', [
+		' B ',
+		'BSB',
+		'PPP'
+	], {
+		B: 'createdeco:gold_bars',
+		S: '#forge:rods/wooden',
+		P: 'tfc_metalwork:metal/plate/gold'
+	})
+		event.recipes.tfc.damage_inputs_shapeless_crafting(
+			'kubejs:metal/bolt/bolt_wrought_iron',['kubejs:metal/bolt/wrought_iron','#forge:files'])
+		event.recipes.tfc.damage_inputs_shapeless_crafting(
+			'kubejs:metal/bolt/bolt_steel',['kubejs:metal/bolt/steel','#forge:files'])
+		event.recipes.tfc.damage_inputs_shapeless_crafting(
+			'kubejs:metal/bolt/steel',['immersiveengineering:stick_steel','#tfc:saw2'])
+		event.recipes.tfc.damage_inputs_shapeless_crafting(
+			'kubejs:metal/bolt/wrought_iron',['immersiveengineering:stick_iron','#tfc:saw2'])
+	})
+	
 	//new shapeless recipes
 	//recipe for leaf blocks for all tfc types
 onEvent('recipes', event => {
@@ -547,11 +1157,26 @@ onEvent('recipes', event => {
 	woodTypes.forEach(type => {
 			event.shapeless(Item.of('tfc:wood/leaves/' + type, 1), ['3x tfc:wood/sapling/' + type]);
 		});
+	woodTypes.forEach(W => {
+		event.shaped(
+			Item.of('tfc:wood/boat/' + W),
+			['   ',
+	        'W W',
+		    'WWW'],
+			{ 
+			W: 'tfc:wood/planks/' + W,
+			}
+		)
+		event.recipes.tfc.damage_inputs_shapeless_crafting(
+			'kubejs:taproot',['tfc:plant/yucca','#tfc:knives'])
+		event.recipes.tfc.damage_inputs_shapeless_crafting(
+			'kubejs:taproot',['tfc:plant/sagebrush','#tfc:knives'])
+		})
 //sapling to stick recipe - wattle&daub are very big stick consumers, and I have disabled planks to sticks recipe
 	woodTypes.forEach(type => {
 		event.recipes.tfc.extra_products_shapeless_crafting('tfc:wood/fallen_leaves/' + type, event.recipes.tfc.damage_inputs_shapeless_crafting(
 			'minecraft:stick', ['tfc:wood/sapling/' + type, '#tfc:knives']));
-	});
+		});
 
 	event.recipes.tfc.extra_products_shapeless_crafting('afc:wood/fallen_leaves/eucalyptus',event.recipes.tfc.damage_inputs_shapeless_crafting(
 			'minecraft:stick',['afc:wood/sapling/eucalyptus','#tfc:knives']))	
@@ -590,20 +1215,8 @@ onEvent('recipes', event => {
 		event.custom({type: 'create:cutting', ingredients: [Ingredient.of('tfc:wood/wood/' + i).toJson()],
 			results: [Item.of('tfc:wood/stripped_wood/' + i, 1)], processingTime: 50}) })
 	})
-onEvent('tfc.data', event => {
-	event.addTFCHeat('chemlib:zinc_sulfide_dust', 1.25,300);
-	event.addTFCHeat('minecraft:glowstone_dust', 1.25);
-	event.addTFCHeat('exoticbirds:raw_birdmeat', 0.75);
-	event.addTFCHeat('exoticbirds:cooked_birdmeat', 0.75);
-	event.addTFCHeat('minecraft:blaze_powder', 0.25,300);
-	//event.addTFCFuel('minecraft:blaze_powder', 3025, 1200);
-	event.addTFCFuel('minecraft:coal_block', 1800, 1200)
-	event.custom({type: 'tfc:fuels', item: [Ingredient.of('minecraft:blaze_powder').toJson()],
-	    duration: 1800, temperature: 3300}) })
 onEvent('recipes', event => {
-	event.shapeless(Item.of('create:crafting_blueprint',1), ['minecraft:painting', '#tfc:workbenches']),  			
-	event.shapeless(Item.of('createindustry:track_ballast', 1), ['tfc:aggregate']),		
-	event.shapeless(Item.of('tfc:aggregate', 1), ['createindustry:track_ballast']),	
+	event.shapeless(Item.of('create:crafting_blueprint',1), ['minecraft:painting', '#tfc:workbenches']),  				
 	event.shapeless(Item.of('chemlib:zinc_sulfide_dust', 1), ['#forge:dusts/zinc', '#forge:dusts/zinc', '#forge:dusts/sulfur', '#forge:dusts/sulfur']),
 	event.recipes.tfc.heating(Item.of('minecraft:glowstone_dust'), ('chemlib:zinc_sulfide_dust'), 300)  	
 	event.shapeless(Item.of('minecraft:blaze_powder', 2), ['#forge:dusts/iron', '#forge:dusts/iron', '#forge:dusts/iron', '#forge:dusts/aluminum'])
@@ -619,6 +1232,8 @@ onEvent('recipes', event => {
 	event.shapeless(Item.of('tfc:dirt/silt', 4), [Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),
 	'minecraft:clay','minecraft:clay','minecraft:clay','minecraft:clay', '#forge:sand', 'tfc:compost'])
 	})
+	event.shapeless('create:copper_diving_helmet', ['minecraft:glass_pane', 'tfc:metal/helmet/copper', 'minecraft:leather', 'tfc:glue'])
+	event.shapeless('kubejs:rootball', ['kubejs:taproot', 'kubejs:taproot', 'kubejs:taproot', 'kubejs:taproot'])
 	event.shapeless(
 		Item.of('minecraft:anvil',1),
 		[ 
@@ -632,6 +1247,33 @@ onEvent('recipes', event => {
 		]
 	)
 	event.shapeless(
+		Item.of('kubejs:snow_jug',1),
+		[ 
+		'tfc:ceramic/jug',
+		'minecraft:snowball', 'minecraft:snowball', 'minecraft:snowball', 'minecraft:snowball'
+		]
+	)
+	event.shapeless(
+		Item.of('kubejs:snow_jug',1),
+		[ 
+		'tfc:ceramic/jug',
+		'minecraft:snow_block'
+		]
+	)
+	event.shapeless(
+		Item.of(Item.of('tfc:ceramic/jug', '{fluid:{Amount:100,FluidName:"minecraft:water"}}'),1),
+		[ 
+		'kubejs:snow_jug',
+		'tfc:torch'
+		]	
+	)
+	event.shapeless(
+		Item.of(Item.of('tfc:ceramic/jug', '{fluid:{Amount:100,FluidName:"minecraft:water"}}'),1),
+		[ 
+		'#tfc:rock_knapping', 'tfc:ceramic/jug', 'kubejs:rootball', 'kubejs:rootball'
+		]	
+	)
+	event.shapeless(
 		Item.of('tfc:wattle/unstained',1),
 		[ 
 			'tfc:wattle',
@@ -642,8 +1284,16 @@ onEvent('recipes', event => {
 			'minecraft:stick'
 		]
 	  )
-	event.recipes.tfc.heating(Item.of('exoticbirds:cooked_birdmeat'.copyFood(),1), Ingredient.notRotten('exoticbirds:raw_birdmeat').copyHeat(), 200)  	  
+	  event.shapeless(Item.of('minecraft:beehive',1), ['firmalife:beehive'])
+	  event.shapeless(Item.of('firmalife:beehive',1), ['minecraft:beehive'])
+	event.recipes.tfc.heating(Item.of('exoticbirds:cooked_birdmeat'.copyFood(),1), Ingredient.notRotten('exoticbirds:raw_birdmeat').copyHeat(), 200)
+	event.recipes.tfc.heating(Item.of('tfc:ceramic/jug', '{fluid:{Amount:100,FluidName:minecraft:water"}}'), Ingredient('kubejs:snow_jug').copyHeat(), 25) 
+	event.recipes.tfc.heating(Item.of('tfc:ceramic/jug'), Ingredient(Item.of('tfc:ceramic/jug', '{fluid:{Amount:100,FluidName:minecraft:water"}}')).copyHeat(), 100)   
+	event.recipes.tfc.heating(Fluid.of('minecraft:water',25), Ingredient('minecraft:snow_block'), 100)  
+	event.recipes.tfc.heating(Fluid.of('minecraft:water',6.25), Ingredient('minecraft:snowball'), 100)   
 	event.recipes.tfc.heating(Fluid.of('tfc_metallum:andesite_alloy',25), Ingredient('create:andesite_alloy'), 200)  
+	event.recipes.tfc.casting(Item.of('tfc:ceramic/jug', '{fluid:{Amount:100,FluidName:"minecraft:water"}}'), 'tfc:jug', FluidStackIngredient.of('water'), 1.0) 
+	event.recipes.tfc.casting(Item.of('tfc:ceramic/jug', '{fluid:{Amount:100,FluidName:"minecraft:water"}}'), 'tfc:jug', FluidStackIngredient.of('minecraft:water'), 1.0) 
 })
 //container tweaks - not working?
 onEvent('tfc.limit_container_size', event => {
@@ -659,22 +1309,56 @@ onEvent('tfc.limit_container_size', event => {
 	})
 })*/
 onEvent('recipes', event => {
-	event.recipes.create.mixing(Fluid.of('createindustry:liquid_concrete_fluid',2000),[
-		Item.of('#forge:sand'),
-		Item.of('#forge:gravel'),
-		Item.of('createindustry:limesand'),
-	 	Fluid.of('water',1000)
+	//Create Mixer Recipes
+	event.recipes.create.mixing(Item.of(Fluid.of('sliceanddice:fertilizer',250)),[
+		'tfc:compost', Fluid.water(250) ])
+	event.recipes.create.mixing(Item.of(Fluid.of('sliceanddice:fertilizer',250)),[
+		'minecolonies:compost', Fluid.water(250) ])
+	event.recipes.create.mixing(Item.of(Fluid.of('sliceanddice:fertilizer',500)),[
+		'immersiveengineering:fertilizer', Fluid.water(500) ])
+	const concColors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']
+	concColors.forEach(color => {
+		event.recipes.tfc.barrel_instant(
+			Item.of('minecraft:' + color + '_concrete'),
+			'#minecolonies:concrete',
+			Fluid.of('tfc:' + color + '_dye', 10))
+		event.recipes.tfc.barrel_instant(
+			Item.of('minecraft:' + color + '_concrete'),
+			'#minecolonies:concrete_powder',
+			Fluid.of('tfc:' + color + '_dye', 10))
+		event.shapeless(
+			Item.of('8x minecraft:' + color + '_concrete_powder'),
+			['8x #minecolonies:concrete_powder',
+			'minecraft:' + color + '_dye'])
+		event.shaped('exoticbirds:'+color+'_birdhouse', [
+			'DP ',
+			'PNP',
+			' S '
+			], {
+				D: 'minecraft:'+color+'_dye',
+				N: 'exoticbirds:nest',
+				S: '#minecraft:wooden_slabs',
+				P: '#tfc:lumber'
+			})		
+	})	
+	event.recipes.create.mixing(Item.of('minecraft:light_gray_concrete_powder',2),[
+		'#forge:sand',
+		'#forge:gravel',
+		Item.of('tfc:powder/flux')
 	])
-	event.recipes.create.mixing(Item.of('createindustry:cement',1),[
-		Item.of('createindustry:limesand'),
-	 	Fluid.of('water',1000)
-	])
+	//Create Crusher Recipes
+	event.recipes.createCrushing([
+		'kubejs:limesand'
+	], 'tfc:rock/gravel/limestone')
 	event.recipes.createCrushing([
 		'industrializedcreate:coal_dust'
 	], 'tfc:ore/bituminous_coal')
 	event.recipes.createCrushing([
 		'industrializedcreate:coal_dust'
 	], 'tfc:ore/lignite')
+	event.recipes.createCrushing([
+		'exnihilosequentia:dust'
+	], '#forge:sand')
 	event.custom({type: 'create:crushing', ingredients: [Ingredient.of('firmalife:ore/poor_chromite').toJson()],
 		results: [Item.of('firmalife:ore/small_chromite', 2), Item.of('firmalife:ore/small_chromite').withChance(0.16)], processingTime: 250,
 	  })
@@ -720,13 +1404,32 @@ onEvent('recipes', event => {
         event.custom({type: 'create:crushing', ingredients: [Ingredient.of('tfc_ie_addon:ore/rich_' + i).toJson()],
 	        results: [Item.of('tfc_ie_addon:ore/small_' + i, 4), Item.of('tfc_ie_addon:ore/small_' + i).withChance(0.66)], processingTime: 250}) 
     })
-
+	event.recipes.create.crushing('4x tfc:powder/kaolinite', 'tfc:ore/kaolinite')
+	event.recipes.create.crushing('4x tfc:powder/graphite', 'tfc:ore/graphite')
+	event.recipes.create.crushing('4x tfc:powder/sulfur', 'tfc:ore/sulfur')
+	event.recipes.create.crushing('8x minecraft:redstone', 'tfc:ore/cinnabar')
+	event.recipes.create.crushing('8x minecraft:redstone', 'tfc:ore/cryolite')
+	event.recipes.create.crushing('4x tfc:powder/saltpeter', 'tfc:ore/saltpeter')
+	event.recipes.create.crushing('4x tfc:powder/sylvite', 'tfc:ore/sylvite')
+	event.recipes.create.crushing('6x tfc:powder/flux', 'tfc:ore/borax')
+	event.recipes.create.crushing('4x tfc:powder/salt', 'tfc:ore/halite')
+	event.recipes.createsifterSifting([Item.of('tfc:ore/small_native_copper').withChance(0.01).toJson(),Item.of('tfc:ore/small_native_gold').withChance(0.01).toJson(),Item.of('tfc:ore/small_hematite').withChance(0.01).toJson(),Item.of('tfc:ore/small_native_silver').withChance(0.01).toJson(),Item.of('tfc:ore/small_cassiterite').withChance(0.01).toJson(),Item.of('tfc:ore/small_bismuthinite').withChance(0.01).toJson(),Item.of('tfc:ore/small_garnierite').withChance(0.01).toJson(),Item.of('tfc:ore/small_malachite').withChance(0.01).toJson(),Item.of('tfc:ore/small_magnetite').withChance(0.01).toJson(),Item.of('tfc:ore/small_limonite').withChance(0.01).toJson(),Item.of('tfc:ore/small_sphalerite').withChance(0.01).toJson(),Item.of('tfc:ore/small_tetrahedrite').withChance(0.01).toJson(),Item.of('tfc_metallum:ore/small_bauxite').withChance(0.01).toJson()], ['#tfc:rock/gravel','createsifter:andesite_mesh'])
+	const stone = ["granite", "diorite", "gabbro", "shale", "claystone", "limestone", "conglomerate", "dolomite", "chert", "chalk", "rhyolite", "basalt", "andesite", "dacite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"]
+	const ore = ["native_copper", "native_gold", "native_silver", "cassiterite"]
+	const mesh = ["andesite", "zinc", "brass"]
+// Create Sifting Recipes
+	stone.forEach(rock => {
+		ore.forEach(i => {
+			mesh.forEach(m => {
+				event.recipes.createsifterSifting([Item.of('tfc:ore/small_' + i).withChance(0.33), Item.of('tfc:rock/loose/' + rock).withChance(0.33)], ['tfc:deposit/' + i + '/' + rock, 'createsifter:' + m + '_mesh'])
+			})
 		})
-
-global.gBlock = ['agape_space:moon_soil', 'agape_space:dark_soil', 'agape_space:red_soil', 'agape_space:scorched_soil', 'agape_space:sulfuric_soil', 'agape_space:radiant_soil', 'agape_space:europa_sediment', 'agape_space:titan_sludge']
+	})
+	global.gBlock = ['agape_space:moon_soil', 'agape_space:dark_soil', 'agape_space:red_soil', 'agape_space:scorched_soil', 'agape_space:sulfuric_soil', 'agape_space:radiant_soil', 'agape_space:europa_sediment', 'agape_space:titan_sludge']
 	onEvent('tags.blocks', event => {
 		global.gBlock.forEach(i => {
 			event.add('tfc:can_landslide', i)
+		})
 	})
 })
 	onEvent('recipes', event => {

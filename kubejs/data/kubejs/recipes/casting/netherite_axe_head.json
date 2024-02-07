@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfc:ceramic/axe_head_mold"
+  },
+  "fluid": {
+    "ingredient": "kubejs:metal/netherite",
+    "amount": 100
+  },
+  "result": {
+    "item": "kubejs:metal/axe_head/netherite"
+  },
+  "break_chance": 1
+}

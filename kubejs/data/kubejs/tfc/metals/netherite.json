@@ -1,0 +1,12 @@
+{
+  "tier": 6,
+  "fluid": "kubejs:metal/netherite",
+  "melt_temperature": 1700,
+  "specific_heat_capacity": 0.01,
+  "ingots": {
+    "tag": "forge:ingots/netherite"
+  },
+  "sheets": {
+    "tag": "forge:sheets/netherite"
+  }
+}

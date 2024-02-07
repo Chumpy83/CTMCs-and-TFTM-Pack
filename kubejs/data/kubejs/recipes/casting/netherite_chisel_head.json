@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "tfc:ceramic/chisel_head_mold"
+  },
+  "fluid": {
+    "ingredient": "kubejs:metal/netherite",
+    "amount": 100
+  },
+  "result": {
+    "item": "kubejs:metal/chisel_head/netherite"
+  },
+  "break_chance": 1
+}

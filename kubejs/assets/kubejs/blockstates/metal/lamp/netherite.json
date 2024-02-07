@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "hanging=false,lit=false": {
+      "model": "kubejs:block/metal/lamp/netherite_off.json"
+    },
+    "hanging=true,lit=false": {
+       "model": "kubejs:block/metal/lamp/netherite_hanging_off.json"
+    },
+    "hanging=false,lit=true": {
+       "model": "kubejs:block/metal/lamp/netherite_on.json"
+    },
+    "hanging=true,lit=true": {
+       "model": "kubejs:block/metal/lamp/netherite_hanging_on.json"
+    }
+  }
+}

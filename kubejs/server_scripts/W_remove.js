@@ -1,19 +1,15 @@
-// priority: 10
+priority: 10
+settings.logAddedRecipes = true
+settings.logRemovedRecipes = true
+settings.logSkippedRecipes = true
+settings.logErroringRecipes = true
 onEvent('recipes', event => {
     // remove all recipes for type
 	event.remove({type: 'minecraft:campfire_cooking'})
 	event.remove({type: 'minecraft:smelting'})
-	// other mods
-//	event.remove({output: ['#forge:sheets'], mod: 'tfc_ie_addon'})
-//	event.remove({output: ['#forge:rods'], mod: 'tfc_ie_addon'})
-//	event.remove({output: ['#forge:dyes'], mod: 'tfc_ie_addon'})
-//	event.remove({output: ['#forge:dyes'], mod: 'create'})
-//	event.remove({output: ['#forge:dyes'], mod: 'farmersdelight'})
-//	event.remove({output: ['#forge:rods'], mod: 'immersiveengineering'})
-	// other mods recipe type
-//	event.remove({output: ['#forge:dusts'], type: 'immersiveengineering:hammer_crushing'})
-//	event.remove({output: ['#forge:storage_blocks'], type: 'immersiveengineering:metal_press'})
-//	event.remove({output: ['#forge:wires'], type: 'immersiveengineering:metal_press'})
+	event.remove({input: '#minecraft:planks', output: '#minecraft:beds'})
+	event.remove({input: '#forge:ingots/copper', output: 'create:copper_backtank'})
+	event.remove({output: 'create:diving_helmet'})
 	event.remove({output: ['#forge:ingots', '#forge:nuggets', '#minecraft:coals', '#forge:gems'], type: 'minecraft:smelting'})
 	event.remove({output: ['minecraft:iron_ingot'], input: 'minecraft:iron_block'})
 	event.remove({output: ['#forge:ingots', '#forge:nuggets', '#minecraft:coals', '#forge:gems'], type: 'minecraft:blasting'})
@@ -21,14 +17,103 @@ onEvent('recipes', event => {
 	event.remove({output: ['minecraft:stick'], input: '#minecraft:planks'})
 	event.remove({output: ['minecraft:slime_block']})
 	event.remove({mod: 'create', output: ['create:belt_connector', 'create:dough', 'create:blaze_cake_base', 'create:blaze_cake', 'create:super_glue']})
+	event.remove({output: ['create_things_and_misc:glue_packaging']}) 
 	event.remove({mod: 'minecraft', output: ['minecraft:dried_kelp_block']})
 	event.remove({mod: 'railways', output: ['railways:track_crimson', 'railways:track_dark_oak', 'railways:track_jungle', 'railways:track_warped', 'railways:track_blackstone' ]})
 	event.remove({mod: 'createchunkloading', output: ['createchunkloading:chunk_loader']})
 	event.remove({mod: 'create', output: ['minecraft:slime_ball']})
-	event.remove({mod: 'computercraft', output: ['computercraft:computer_normal', 'computercraft:computer:advanced']})
-	event.remove({mod: 'create', output: ['create:gantry_carriage']})
+	event.remove({mod: 'exnihilosequentia'})
+	event.remove({mod: 'exoticbirds'})
+	event.remove({output: 'computercraft:computer_normal'}) 
+	event.remove({output: 'computercraft:computer_advanced'})
+	event.remove({output: ['create:gantry_carriage']})
+	event.remove({output: ['#tfc:colored_concrete_powder']})
+	event.remove({output: ['#forge:concrete_powders']})
+	event.remove({id: 'minecraft:observer'})
+	event.remove({id: 'tfc:crafting/vanilla/redstone/observer'})
+	event.remove({id: 'minecraft:netherite_ingot'})
+	event.remove({id: 'immersiveengineering:mixer/concrete'})
+	event.remove({id: 'computercraft:pocket_computer_normal'})
+	event.remove({id: 'computercraft:pocket_computer_advanced'})
+	event.remove({id: 'computercraft:pocket_computer_advanced_upgrade'})
+	event.remove({id: 'computercraft:turtle_normal'})
+	event.remove({id: 'computercraft:turtle_advanced'})
+	event.remove({id: 'computercraft:turtle_advanced_upgrade'})
+	event.remove({id: 'computercraft:speaker'})
+	event.remove({id: 'computercraft:disk_drive'})
+	event.remove({id: 'computercraft:printer'})
+	event.remove({id: 'computercraft:monitor_normal'})
+	event.remove({id: 'computercraft:monitor_advanced'})
+	event.remove({id: 'computercraft:wireless_modem_normal'})
+	event.remove({id: 'computercraft:wireless_modem_advanced'})
+	event.remove({id: 'computercraft:wired_modem'})
+	event.remove({id: 'compactmachines:wall'})
+	event.remove({id: 'compactmachines:machine_tiny'})
+	event.remove({id: 'compactmachines:machine_small'})
+	event.remove({id: 'compactmachines:machine_normal'})
+	event.remove({id: 'compactmachines:machine_large'})
+	event.remove({id: 'compactmachines:machine_giant'})
+	event.remove({id: 'compactmachines:machine_maximum'})	
+	event.remove({id: 'createsifter:sifting/sand_andesite_mesh'})
+	event.remove({id: 'createsifter:sifting/sand_string_mesh'})
+	event.remove({id: 'createsifter:sifting/gravel_andesite_mesh'})
+	event.remove({id: 'createsifter:sifting/dirt_strig_mesh_waterlogged'})
+	event.remove({id: 'createsifter:sifting/sand_zinc_mesh'})
+	event.remove({id: 'createsifter:sifting/gravel_zinc_mesh'})
+	event.remove({id: 'createsifter:sifting/sand_brass_mesh'})
+	event.remove({id: 'createsifter:sifting/gravel_brass_mesh'})
+	event.remove({mod: 'alchemistry', output: 'alchemistry:atomizer'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:compactor'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:combiner'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:dissolver'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:liquifier'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:fission_chamber_controller'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:fusion_chamber_controller'})
+	event.remove({mod: 'alchemistry', output:  'alchemistry:reactor_energy'})
+})
+onEvent('recipes', event => {
+	event.remove({output: ['minecolonies:blockhutlumberjack']})
+	event.remove({output: ['minecolonies:blockhutminer']})
+	event.remove({output: ['minecolonies:blockhutfarmer']})
+	event.remove({output: ['minecolonies:blockhutbaker']})
+	event.remove({id: ['minecolonies:blockhutfarmerstone']})
+	event.remove({id: ['minecolonies:blockhutdeliverymaniron']})
+	event.remove({id: ['minecolonies:blockhutlumberjackstone']})
+	event.remove({id: ['minecolonies:blockhutminerstone']})
+	event.remove({id: ['minecolonies:blockhutcowboy']})
+	event.remove({id: ['minecolonies:blockhutswineherder']})
+	event.remove({id: ['minecolonies:blockhutcrusher']})
+	event.remove({id: ['engineersdecor:small_lab_furnace_recipe']})
+	event.remove({id: ['engineersdecor:factory_dropper_recipe']})
+	event.remove({id: ['engineersdecor:factory_placer_recipe']})
+	event.remove({id: ['engineersdecor:small_block_breaker_recipe']})
+	event.remove({id: ['engineersdecor:factory_hopper']})
+	event.remove({id: ['engineersdecor:small_mineral_smelter_recipe']})
+	event.remove({id: ['engineersdecor:small_freezer_recipe']})
+	event.remove({id: ['engineersdecor:small_solar_panel_recipe']})
+	event.remove({id: ['engineersdecor:small_milking_machine_recipe']})
+	event.remove({id: ['engineersdecor:small_tree_cutter_recipe']})
+	event.remove({mod: 'vs_eureka', input: ['minecraft:gold_ingot']})
+	event.remove({mod: 'vs_eureka', input: ['tfc:metal/ingot/gold']})
+	event.remove({mod: 'vs_eureka', input: ['minecraft:blast_furnace']})
+	event.remove({id: ['vs_eureka:balloon']})
+	event.remove({id: ['vs_eureka:engine']})
+	event.remove({id: ['vs_eureka:oak_ship_helm']}) 
+	event.remove({id: ['vs_eureka:spruce_ship_helm']})
+	event.remove({id: ['vs_eureka:birch_ship_helm']}) 
+	event.remove({id: ['vs_eureka:acacia_ship_helm']})
+})
+onEvent('recipes', event => {
+
+	event.remove({mod: 'buildinggadgets', output:  'buildinggadgets:gadget_building'})
+	event.remove({mod: 'buildinggadgets', output:  'buildinggadgets:gadget_exchanging'})
+	event.remove({mod: 'buildinggadgets', output:  'buildinggadgets:gadget_copy_paste'})
+	event.remove({mod: 'buildinggadgets', output:  'buildinggadgets:gadget_destruction'})
+	const woods = ['dark_oak', 'jungle', 'warped', 'crimson', 'mangrove']
+	woods.forEach(wood => {event.remove({mod: 'create_things_and_misc', output:  'create_things_and_misc:'+wood+'_sail'})	})
 	// remove for type
 	event.remove({output: [
+		'minecraft:ancient_debris',
 		'minecraft:stone', 'minecraft:granite',
 		'industrializedcreate:raw_leather_sheet',
 		'industrializedcreate:tanned_leather_sheet',
@@ -48,31 +133,9 @@ onEvent('recipes', event => {
 		'create_things_and_misc:brass_knife',
 		'#forge:storage_blocks',
 		'#minecraft:coals',
-//		'minecraft:bone_meal',
-//		'minecraft:white_carpet',
-		'minecraft:white_bed',
-//		'minecraft:sugar',
-//		'minecraft:paper',
-//		'minecraft:string',
-		'minecraft:snow',
-		'#minecraft:wool',
-		'#tfc:colored_bed',
-		'#tfc:colored_shulker_boxes',
-		'#tfc:colored_concrete_powder',
-		'create_enchantment_industry'
-		], type: 'minecraft:crafting_shapeless'})
-	event.remove({output: [
-		'#forge:colored_sleeping_bag',
-		'#forge:colored_hammock',
-		'#forge:storage_blocks',
-		'minecraft:white_terracotta',
-//		'#forge:glass',
-//		'#tfc:colored_bed',
-//		'#tfc:colored_carpet',
-//		'#tfc:colored_terracotta',
-//		'#tfc:colored_stained_glass_pane'
-	], type: 'minecraft:crafting_shaped'})
-	// remove all recipes
+		'minecraft:snow'
+		]})
+	
 	event.remove({output: [
 		'immersiveengineering:pickaxe_steel',
 		'immersiveengineering:shovel_steel',
@@ -83,11 +146,6 @@ onEvent('recipes', event => {
 		'immersiveengineering:armor_steel_legs',
 		'immersiveengineering:armor_steel_chest',
 		'immersiveengineering:armor_steel_head',
-//		'immersiveengineering:plate_silver',
-//		'immersiveengineering:plate_gold',
-//		'immersiveengineering:plate_steel',
-//		'immersiveengineering:plate_copper',
-//		'immersiveengineering:plate_nickel',
 		'tinyredstone:silicon',
 		'tinyredstone:silicon_compound',
 		'create_sa:copper_helmet',
@@ -181,12 +239,6 @@ onEvent('recipes', event => {
 		'create:rose_quartz',
 		'minecraft:gold_ingot',
 		'minecraft:copper_ingot',
-		//'tfc:food/barley_dough',
-		//'tfc:food/maize_dough',
-		//'tfc:food/oat_dough',
-		//'tfc:food/rice_dough',
-		//'tfc:food/rye_dough',
-		//'tfc:food/wheat_dough',
 		'#forge:tools/netherite', '#forge:armor/netherite', 'minecraft:chainmail_helmet', 'minecraft:chainmail_chestplate', 'minecraft:chainmail_leggings', 
 		'minecraft:chainmail_boots', 'createindustry:steel_block', 'createindustry:steel_ingot', 'createindustry:aluminum_block', 'createindustry:coal_coke_block',
 		'createindustry:coal_coke',
@@ -204,4 +256,12 @@ onEvent('recipes', event => {
 	event.remove({input: ['minecraft:mutton', 'minecraft:porkchop', 'minecraft:beef', 'minecraft:chicken'], type: 'minecraft:smoking'})
 	event.remove({input: ['minecraft:mutton', 'minecraft:porkchop', 'minecraft:beef', 'minecraft:chicken'], type: 'minecraft:crafting_shaped'})
 	event.remove({input: 'afc:rubber_bar', output: 'minecraft:slime_ball' })
+	event.remove({input: 'minecraft:ancient_debris'})
+	event.remove({mod: ['minecraft', 'create', 'immersiveengineering', 'thermal', 'mekanism', 'agape_space'], tag: 'forge:raw_materials'})
+	const concColors = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue', 'brown', 'green', 'red', 'black']
+	concColors.forEach(color => {
+	event.remove({output: ['minecraft:' + color + '_concrete_powder']})
+	event.remove({id: ['tfc:barrel/dye/' + color + '_concrete_powder']})
+	event.remove({id: ['minecolonies:concretemixer_custom/' + color + '_concrete_powder']})
+	})
 })

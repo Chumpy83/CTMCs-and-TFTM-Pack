@@ -1,0 +1,12 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "kubejs:metal/tuyere/netherite"
+  },
+  "result_fluid": {
+    "fluid": "kubejs:metal/netherite",
+    "amount": 400
+  },
+  "temperature": 1700,
+  "use_durability": true
+}

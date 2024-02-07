@@ -1,0 +1,102 @@
+{
+  "textures": {
+    "front": "exoticbirds:block/birdhouse_front",
+    "side": "exoticbirds:block/birdhouse_side",
+    "perch": "minecraft:block/spruce_planks",
+    "roof": "minecraft:block/magenta_terracotta"
+  },
+  "display": {
+    "gui": {
+      "rotation": [ 30, 225, 0 ],
+      "translation": [ 1.5, 0, 0 ],
+      "scale": [ 0.625, 0.625, 0.625 ]
+    },
+    "fixed": {
+      "rotation": [ 0, 180, 0 ],
+      "translation": [ 0, 0, 0 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, 125, 0 ],
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.4, 0.4, 0.4 ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 75, 125, 0 ],
+      "translation": [ 0, 2.5, 0 ],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    },
+    "ground": {
+      "scale": [ 0.4, 0.4, 0.4 ]
+    }
+  },    "elements": [
+  {
+    "name": "main",
+    "from": [ 3, 0, 8 ],
+    "to": [ 13, 10, 16 ],
+    "faces": {
+      "north": { "texture": "#front", "uv": [ 3, 6, 13, 16 ] },
+      "east": { "texture": "#side", "uv": [ 4, 6, 12, 16 ] },
+      "south": { "texture": "#side", "uv": [ 3, 6, 13, 16 ] },
+      "west": { "texture": "#side", "uv": [ 4, 6, 12, 16 ] },
+      "down": { "texture": "#side", "uv": [ 3, 4, 13, 12 ], "rotation": 180 }
+    }
+  },
+  {
+    "name": "roof_left",
+    "from": [ 11, 4, 6 ],
+    "to": [ 13, 15, 17 ],
+    "rotation": { "origin": [ 8.5, 9.5, 8 ], "axis": "z", "angle": 45.0 },
+    "faces": {
+      "north": { "texture": "#roof", "uv": [ 0, 0, 2, 11 ] },
+      "east": { "texture": "#roof", "uv": [ 0, 0, 11, 11 ] },
+      "south": { "texture": "#roof", "uv": [ 0, 0, 2, 11 ] },
+      "west": { "texture": "#roof", "uv": [ 0, 0, 11, 11 ] },
+      "up": { "texture": "#roof", "uv": [ 0, 0, 2, 11 ], "rotation": 180 },
+      "down": { "texture": "#roof", "uv": [ 0, 0, 2, 11 ], "rotation": 180 }
+    }
+  },
+  {
+    "name": "roof_right",
+    "from": [ 3, 3, 6 ],
+    "to": [ 5, 12, 17 ],
+    "rotation": { "origin": [ 8.5, 9.5, 8 ], "axis": "z", "angle": -45.0 },
+    "faces": {
+      "north": { "texture": "#roof", "uv": [ 0, 0, 2, 9 ] },
+      "east": { "texture": "#roof", "uv": [ 0, 0, 11, 9 ] },
+      "south": { "texture": "#roof", "uv": [ 0, 0, 2, 9 ] },
+      "west": { "texture": "#roof", "uv": [ 0, 0, 11, 9 ] },
+      "down": { "texture": "#roof", "uv": [ 0, 0, 2, 11 ], "rotation": 180 }
+    }
+  },
+  {
+    "name": "top_lower",
+    "from": [ 4, 10, 8 ],
+    "to": [ 12, 12, 16 ],
+    "faces": {
+      "north": { "texture": "#front", "uv": [ 4, 4, 12, 6 ] },
+      "south": { "texture": "#side", "uv": [ 4, 4, 12, 6 ] }
+    }
+  },
+  {
+    "name": "perch",
+    "from": [ 3, 0, 6 ],
+    "to": [ 13, 2, 8 ],
+    "faces": {
+      "north": { "texture": "#perch", "uv": [ 0, 0, 10, 2 ] },
+      "east": { "texture": "#perch", "uv": [ 0, 0, 2, 2 ] },
+      "west": { "texture": "#perch", "uv": [ 0, 0, 2, 2 ] },
+      "up": { "texture": "#perch", "uv": [ 0, 0, 10, 2 ], "rotation": 180 },
+      "down": { "texture": "#perch", "uv": [ 0, 0, 10, 2 ], "rotation": 180 }
+    }
+  },
+  {
+    "name": "top_upper",
+    "from": [ 6, 12, 8 ],
+    "to": [ 10, 14, 16 ],
+    "faces": {
+      "north": { "texture": "#front", "uv": [ 6, 2, 10, 4 ] },
+      "south": { "texture": "#side", "uv": [ 6, 2, 10, 4 ] }
+    }
+  }
+]
+}

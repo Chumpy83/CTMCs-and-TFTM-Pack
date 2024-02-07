@@ -1,0 +1,62 @@
+{
+  "type": "createsifter:sifting",
+  "ingredients": [
+    {
+      "item": "createsifter:zinc_mesh"
+    },
+    {
+      "tag": "tfc:rock/gravel"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc_metallum:ore/small_bertrandite",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_cobaltite",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_kernite",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_galena",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_monazite",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_native_osmium",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_native_iridium",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_native_platinum",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_rutile",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_stibnite",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_uraninite",
+      "chance": 0.01
+    },
+    {
+      "item": "tfc_metallum:ore/small_wolframite",
+      "chance": 0.01
+    }
+  ],
+  "processingTime": 500
+}

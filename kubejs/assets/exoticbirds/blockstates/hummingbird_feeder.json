@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "hanging=true,level=0": {
+      "model": "exoticbirds:block/hummingbird_feeder_hanging_empty"
+    },
+    "hanging=true,level=1": {
+      "model": "exoticbirds:block/hummingbird_feeder_hanging_one_third_full"
+    },
+    "hanging=true,level=2": {
+      "model": "exoticbirds:block/hummingbird_feeder_hanging_two_thirds_full"
+    },
+    "hanging=true,level=3": {
+      "model": "exoticbirds:block/hummingbird_feeder_hanging_full"
+    },
+    "hanging=false,level=0": {
+      "model": "exoticbirds:block/hummingbird_feeder_empty"
+    },
+    "hanging=false,level=1": {
+      "model": "exoticbirds:block/hummingbird_feeder_one_third_full"
+    },
+    "hanging=false,level=2": {
+      "model": "exoticbirds:block/hummingbird_feeder_two_thirds_full"
+    },
+    "hanging=false,level=3": {
+      "model": "exoticbirds:block/hummingbird_feeder_full"
+    }
+  }
+}

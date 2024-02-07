@@ -175,6 +175,22 @@
     "tfc:metal/shears/red_steel",
     "tfc:metal/tuyere/red_steel",
     "tfc:metal/fishing_rod/red_steel",
-    "tfchomestead:walking_cane"
+    "tfchomestead:walking_cane",
+    "kubejs:metal/tuyere/netherite",
+    "kubejs:metal/fishing_rod/netherite",
+    "kubejs:metal/pickaxe/netherite",
+    "kubejs:metal/shovel/netherite",
+    "kubejs:metal/axe/netherite",
+    "kubejs:metal/hoe/netherite",
+    "kubejs:metal/chisel/netherite",
+    "kubejs:metal/sword/netherite",
+    "kubejs:metal/mace/netherite",
+    "kubejs:metal/saw/netherite",
+    "kubejs:jav_netherite",
+    "kubejs:metal/hammer/netherite",
+    "kubejs:metal/propick/netherite",
+    "kubejs:metal/knife/netherite",
+    "kubejs:metal/scythe/netherite",
+    "kubejs:metal/shears/netherite"
   ]
 }

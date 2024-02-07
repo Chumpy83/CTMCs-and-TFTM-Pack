@@ -1,0 +1,15 @@
+{
+  "type": "tfc:anvil",
+  "input": {
+    "tag": "forge:ingots/netherite"
+  },
+  "result": {
+    "item": "kubejs:metal/saw_blade/netherite"
+  },
+  "tier": 6,
+  "rules": [
+    "hit_last",
+    "hit_second_last"
+  ],
+  "apply_forging_bonus": true
+}

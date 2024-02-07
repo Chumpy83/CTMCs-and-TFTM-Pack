@@ -155,7 +155,12 @@ onEvent('block.loot_tables', event=> {
 			pool.addItem('tfc_ie_addon:mineral/quartz_block',1)
 			})
 		})	
+  event.addSimpleBlock('tfc:calcite')
 	})
+/*  onEvent("lootjs", (event) => {
+    event.addBlockLootModifier("tfc:block/calcite").addLoot("tfc:calcite")
+    event.addBlockLootModifier("tfc:block/calcite_tip").addLoot("tfc:calcite")
+})*/
 onEvent('lootjs', e => {
 	e.addBlockLootModifier('#minecraft:leaves')
 	  .removeLoot('exnihilosequentia:silkworm')
@@ -164,7 +169,10 @@ onEvent('lootjs', e => {
 	  .matchMainHand(Item.of("exnihilosequentia:wooden_crook").ignoreNBT())
 	  .randomChance(0.05)
 	  .addLoot('exnihilosequentia:silkworm')
-	})	
+  e.addBlockLootModifier('#minecraft:dirt')
+  .randomChance(0.01)
+  .addLoot('kubejs:earthworm')
+  })		
 const ironOres = ["minecraft:iron_ore", "minecraft:deepslate_iron_ore"]
 ironOres.forEach(ore => {
   onEvent('block.loot_tables', event=> {

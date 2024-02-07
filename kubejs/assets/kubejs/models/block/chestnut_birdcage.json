@@ -1,0 +1,9 @@
+{
+    "parent": "kubejs:block/birdcage",
+    "textures": {
+        "particle": "block/iron_block",
+        "side": "kubejs:reed_cage_side",
+        "top": "kubejs:reed_cage_top",
+        "base": "tfc:block/wood/planks/chestnut"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "parent": "exoticbirds:block/birdcage",
+    "textures": {
+        "particle": "block/gold_block",
+        "side": "exoticbirds:block/gold_cage_side",
+        "top": "exoticbirds:block/gold_cage_top",
+        "base": "block/gold_block"
+    }
+}

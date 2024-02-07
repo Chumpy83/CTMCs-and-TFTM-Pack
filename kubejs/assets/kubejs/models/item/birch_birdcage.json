@@ -1,0 +1,14 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "kubejs:item/birdcage/birch_birdcage"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "exoticbirds:filled": 1
+            },
+            "model": "kubejs:item/birch_birdcage_full"
+        }
+    ]
+}

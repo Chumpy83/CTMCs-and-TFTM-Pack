@@ -1,0 +1,10 @@
+{
+  "ingredient": [
+    {"item": "chemlib:zinc_sulfide_dust"},
+    {"item": "minecraft:glowstone_dust"},
+    {"item": "minecraft:blaze_powder"},
+    {"item": "kubejs:snow_jug"},
+    {"item": "tfc:jug"}],
+    
+  "heat_capacity": 2
+}

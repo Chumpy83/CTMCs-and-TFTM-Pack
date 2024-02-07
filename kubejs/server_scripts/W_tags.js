@@ -1,29 +1,6 @@
 // priority: 10
 
 // ======= BLOCKS
-onEvent('tags.blocks', event => {
-	event.add('forge:immovable', [
-		'tfc:charcoal_forge',
-		'firmalife:mixing_bowl',
-		'firmalife:iron_composter',
-		"tfc:drying_bricks/silt",
-		"tfc:drying_bricks/silty_loam",
-		"tfc:drying_bricks/sandy_loam",
-		"tfc:drying_bricks/loam",
-		"tfc:ingot_pile",
-		"tfc:firepit",
-		"tfc:pot",
-		"tfc:composter",
-		"tfc:grill",
-		"tfc:bloomery",
-		"tfc:bloom",
-		"tfc:molten",
-		"tfc:charcoal_forge",
-		"#tfc:wild_fruits",
-		"#tfc:anvils",
-		"#tfc:sluices"
-	]) })
-
 // ========== ENTITY TYPE
 // ========= ITEMS
 onEvent('tags.items', event => {
@@ -50,12 +27,7 @@ onEvent('tags.items', event => {
 		'immersiveengineering:transformer',
 		'immersiveengineering:transformer_hv',
 		'immersiveengineering:treated_post',
-		'immersivepetroleum:speedboat'/*,
-		'kubejs:stack_treated_wood',
-		'kubejs:big_stack_treated_wood',
-		'kubejs:canoe',
-		'kubejs:press_head',
-		'kubejs:hardened_press_head'*/
+		'immersivepetroleum:speedboat'
 	]),
 		event.add('tfc:very_large_heavy', [
 			'create:cart_assembler',
@@ -89,7 +61,6 @@ onEvent('tags.items', event => {
 			'immersiveengineering:minecart_woodenbarrel',
 			'immersiveengineering:minecart_metalbarrel',
 			'immersiveengineering:minecart_reinforcedcrate',
-			'supplementaries:dispenser_minecart',
 			'railways:benchcart',
 			'railways:jukeboxcart'
 		]),
@@ -108,12 +79,20 @@ onEvent('tags.items', event => {
 	event.add('forge:eggs', [
 		'exoticbirds:mystery_egg'
 	]),
+	event.add('forge:ingots/netherite', ['kubejs:metal/ingot/netherite']),
+	event.add('forge:sheets/netherite', ['kubejs:metal/sheet/netherite']),
+	event.add('forge:double_ingots/netherite', ['kubejs:metal/double_ingot/netherite']),
+	event.add('forge:double_sheets/netherite', ['kubejs:metal/double_sheet/netherite']),
 
-	event.add('minecolonies:compostable', [
-		'exoticbirds:mystery_egg'
-	]),
+	event.add('forge:lens', ['industrialforegoing:laser_lens0', 'industrialforegoing:laser_lens1', 'industrialforegoing:laser_lens2', 'industrialforegoing:laser_lens3', 'industrialforegoing:laser_lens4',
+			'industrialforegoing:laser_lens5', 'industrialforegoing:laser_lens6', 'industrialforegoing:laser_lens7', 'industrialforegoing:laser_lens8', 'industrialforegoing:laser_lens9', 
+			'industrialforegoing:laser_lens10', 'industrialforegoing:laser_lens11', 'industrialforegoing:laser_lens12', 'industrialforegoing:laser_lens13', 'industrialforegoing:laser_lens14', 
+			'industrialforegoing:laser_lens15'])
+	event.add('minecolonies:compostable', ['exoticbirds:mystery_egg']),
+	event.add('forge:slimeballs', ['tfc:glue']),
 	event.add('firmalife:foods/heatable', [
 		'chemlib:zinc_sulfide_dust',
+		'kubejs:snow_jug',
 		'exnihilosequentia:silkworm',
 		'minecraft:porkchop',
 		'minecraft:mutton',
@@ -123,6 +102,9 @@ onEvent('tags.items', event => {
 		'exoticbirds:mystery_egg',
 		'exoticbirds:raw_birdmeat'
 	]),
+	event.add('tfc:chisel2',['tfc:metal/chisel/wrought_iron', 'tfc:metal/chisel/steel', 'tfc:metal/chisel/black_steel', 'tfc:metal/chisel/red_steel', 'tfc:metal/chisel/blue_steel']), 
+	event.add('tfc:saw2',['tfc:metal/saw/wrought_iron', 'tfc:metal/saw/steel', 'tfc:metal/saw/black_steel', 'tfc:metal/saw/red_steel', 'tfc:metal/saw/blue_steel']), 
+	event.add('forge:files', ['kubejs:metal/file/wrought_iron', 'kubejs:metal/file/steel', 'kubejs:metal/file/black_steel', 'kubejs:metal/file/red_steel', 'kubejs:metal/file/blue_steel']),
 	event.add('tfc:chicken_food', ['exnihilosequentia:silkworm']),
 	event.add('tfc:quai_food', ['exnihilosequentia:silkworm']),
 	event.add('tfc:duck_food', ['exnihilosequentia:silkworm']),
@@ -133,10 +115,6 @@ onEvent('tags.items', event => {
 		'create:sweet_roll',
 		'create:chocolate_glazed_berries',
 		'create:honeyed_apple',
-		'createaddition:chocolate_cake',
-		'createaddition:honey_cake',
-		'createaddition:cake_base',
-		'createaddition:cake_base_baked',
 		'pneumaticcraft:sourdough_bread',
 		'pneumaticcraft:chips',
 		'pneumaticcraft:cod_n_chips',
@@ -175,7 +153,7 @@ onEvent('tags.items', event => {
 		'minecraft:chicken',
 		'exoticbirds:raw_birdmeat'
 	]),
-	event.add('tfc:small_ore_pieces', ['chemlib:zinc_sulfide_dust'
+	event.add('tfc:small_ore_pieces', ['chemlib:zinc_sulfide_dust', 'kubejs:snow_jug'
 	]),
 	event.add('forge:pollution_blocks', [
 		'tfc:grass/silt',
@@ -246,7 +224,21 @@ onEvent('tags.items', event => {
 		'immersiveengineering:screwdriver',
 		'immersiveengineering:chemthrower',
 		'immersiveengineering:railgun',
-		'mcwroofs:roofing_hammer'
+		'mcwroofs:roofing_hammer',
+		'kubejs:metal/axe/netherite',
+		'kubejs:metal/hammer/netherite',
+		'kubejs:metal/sword/netherite',
+		'kubejs:metal/pickaxe/netherite',
+		'kubejs:metal/shovel/netherite',
+		'kubejs:metal/hoe/netherite',
+		'kubejs:metal/shears/netherite',
+		'kubejs:metal/fishing_rod/netherite',
+		'kubejs:metal/javelin/netherite',
+		'kubejs:metal/knife/netherite',
+		'kubejs:metal/scythe/netherite',
+		'kubejs:metal/saw/netherite',
+		'kubejs:metal/mace/netherite',
+		'kubejs:metal/propick/netherite'
 	]),
 	event.add('tfc:plant/green', [
 		'tfc:plant/bluegrass',
@@ -355,7 +347,7 @@ onEvent('tags.items', event => {
 	event.add('tfc:corals/yellow', ['tfc:coral/horn_coral_fan','tfc:coral/horn_coral']),
 	event.add('tfc:firepit_fuel', ['tfc:stick_bunch', '#forge:rods/wooden']),
 	event.add('tfc:forge_fuel',['minecraft:coal_block', 'minecraft:blaze_powder'])
-	event.add('tfc:metal_item', ['chemlib:zinc_sulfide_dust'])
+	event.add('tfc:metal_item', ['chemlib:zinc_sulfide_dust', 'kubejs:snow_jug'])
 	event.add('minecraft:coals', ['minecraft:blaze_powder']),
 	event.add('forge:magma_block', ['minecraft:magma_block', 'tfc:rock/magma/granite', 'tfc:rock/magma/diorite', 'tfc:rock/magma/gabbro', 'tfc:rock/magma/rhyolite', 'tfc:rock/magma/basalt', 'tfc:rock/magma/andesite', 'tfc:rock/magma/dacite']),
 	event.add('forge:farmlands', ['tfc:farmland/silt', 'tfc:farmland/loam', 'tfc:farmland/sandy_loam', 'tfc:farmland/silty_loam']),
@@ -367,12 +359,12 @@ onEvent('tags.items', event => {
 	event.add('forge:shovels/stone', ['tfc:stone/shovel/igneous_extrusive', 'tfc:stone/shovel/igneous_intrusive', 'tfc:stone/shovel/metamorphic', 'tfc:stone/shovel/sedimentary']),
 	event.add('tfc:metal/pickaxe_head/first_metal', ['tfc:metal/pickaxe_head/copper', 'tfc:metal/pickaxe_head/bismuth_bronze', 'tfc:metal/pickaxe_head/black_bronze', 'tfc:metal/pickaxe_head/bronze']),
 	event.add('forge:tools/knives', '#tfc:knives')
+	event.add('tfc:javelins', ['kubejs:metal/javelin/netherite'])
 	event.add('tfc:sandwich_bread', 'pneumaticcraft:sourdough_bread')
 	event.add('forge:shovels/stone', ['tfc:stone/shovel/igneous_extrusive', 'tfc:stone/shovel/igneous_intrusive', 'tfc:stone/shovel/metamorphic', 'tfc:stone/shovel/sedimentary']),
 	event.add('tfc:lamp_fuel', ['tfc:bucket/tallow', 'tfc:bucket/olive_oil', 'immersiveengineering:creosote_bucket']),
 	event.add('tfc:stripped_logs', ['tfc:wood/stripped_log/acacia','tfc:wood/stripped_log/ash','tfc:wood/stripped_log/aspen','tfc:wood/stripped_log/birch','tfc:wood/stripped_log/blackwood','tfc:wood/stripped_log/chestnut','tfc:wood/stripped_log/douglas_fir','tfc:wood/stripped_log/hickory','tfc:wood/stripped_log/kapok','tfc:wood/stripped_log/maple','tfc:wood/stripped_log/oak','tfc:wood/stripped_log/palm','tfc:wood/stripped_log/pine','tfc:wood/stripped_log/rosewood','tfc:wood/stripped_log/sequoia','tfc:wood/stripped_log/spruce','tfc:wood/stripped_log/sycamore','tfc:wood/stripped_log/white_cedar','tfc:wood/stripped_log/willow']),
 	event.add('tfc:planks', ['tfc:wood/planks/acacia','tfc:wood/planks/ash','tfc:wood/planks/aspen','tfc:wood/planks/birch','tfc:wood/planks/blackwood','tfc:wood/planks/chestnut','tfc:wood/planks/douglas_fir','tfc:wood/planks/hickory','tfc:wood/planks/kapok','tfc:wood/planks/maple','tfc:wood/planks/oak','tfc:wood/planks/palm','tfc:wood/planks/pine','tfc:wood/planks/rosewood','tfc:wood/planks/sequoia','tfc:wood/planks/spruce','tfc:wood/planks/sycamore','tfc:wood/planks/white_cedar','tfc:wood/planks/willow']),
-	//event.add('tfc:tree_saplings', ['tfc:wood/sapling/acacia','tfc:wood/sapling/ash','tfc:wood/sapling/aspen','tfc:wood/sapling/birch','tfc:wood/sapling/blackwood','tfc:wood/sapling/chestnut','tfc:wood/sapling/douglas_fir','tfc:wood/sapling/hickory','tfc:wood/sapling/kapok','tfc:wood/sapling/maple','tfc:wood/sapling/oak','tfc:wood/sapling/palm','tfc:wood/sapling/pine','tfc:wood/sapling/rosewood','tfc:wood/sapling/sequoia','tfc:wood/sapling/spruce','tfc:wood/sapling/sycamore','tfc:wood/sapling/white_cedar','tfc:wood/sapling/willow']),
 	event.add('forge:arrow_head', ['minecraft:iron_nugget', 'minecraft:flint', '#forge:nuggets/silver','#forge:nuggets/tin','#forge:nuggets/zinc','#forge:nuggets/copper']),
 	event.add('tfc:drink_items', ['tfc:ceramic/jug', 'waterflasks:leather_flask', 'waterflasks:iron_flask', 'firmalife:hollow_shell']),
 	event.add('forge:sandstone', ['tfc:raw_sandstone/yellow', 'tfc:smooth_sandstone/yellow', 'tfc:cut_sandstone/yellow', 'tfc:raw_sandstone/red', 'tfc:smooth_sandstone/red', 'tfc:cut_sandstone/red']),
@@ -382,19 +374,6 @@ onEvent('tags.items', event => {
 	event.add('forge:wax', ['firmalife:beeswax']),
 	event.add('forge:wax/beeswax', ['firmalife:beeswax']),
 	event.add('forge:oil_seeds', ['tfc:seeds/melon', 'tfc:seeds/pumpkin', 'tfc:seeds/jute', 'tfc:seeds/squash', 'tfc:seeds/beet', 'tfc:seeds/carrot', 'tfc:seeds/cabbage', 'tfc:seeds/rice', 'tfc:seeds/wheat', 'tfc:seeds/maize', 'tfc:seeds/rye', 'tfc:seeds/oat', 'tfc:seeds/barley', 'immersiveengineering:seed']),
-/*	event.add('forge:double_sheets/compressed_iron', ['kubejs:compressed_double_sheet']),
-	event.add('forge:double_sheets', ['kubejs:compressed_double_sheet']),
-	event.add('forge:sheets/compressed_iron', ['kubejs:compressed_sheet']),
-	event.add('forge:sheets', ['kubejs:compressed_sheet']),
-	event.add('forge:wires/compressed_iron', ['kubejs:compressed_wire']),
-	event.add('forge:wires', ['kubejs:compressed_wire']),
-	event.add('forge:double_ingots/compressed_iron', ['kubejs:compressed_double_ingot']),
-	event.add('forge:double_ingots', ['kubejs:compressed_double_ingot']),
-	event.add('forge:ingots', ['refinedstorage:quartz_enriched_iron']),
-	event.add('forge:ingots/allbronze', ['tfc:metal/ingot/bronze', 'tfc:metal/ingot/bismuth_bronze', 'tfc:metal/ingot/black_bronze']),
-	event.add('forge:ingots/glass', ['kubejs:primitive_glass_pane']),
-	event.add('forge:glass_panes', ['kubejs:primitive_glass_pane']),
-	*/
 	event.add('forge:ingots/andesite_alloy', ['create:andesite_alloy']),
 	event.add('forge:rock_andesite_alloy', ['tfc:rock/loose/andesite']),
 	event.add('forge:rods', [
@@ -405,16 +384,13 @@ onEvent('tags.items', event => {
 		'immersiveengineering:stick_aluminum'
 	]),
 	event.add('forge:rods/iron', ['tfc:metal/rod/wrought_iron']),
-//	event.add('forge:rods/compressed_iron', ['kubejs:compressed_rod']),
 	event.add('forge:plates', [
-		//'kubejs:compressed_sheet',
 		'tfc:metal/sheet/rose_gold',
 		'tfc:metal/sheet/zinc',
 		'tfc:metal/sheet/brass',
 		'tfc:metal/sheet/bronze',
 		'tfc:metal/sheet/tin'
 	]),
-//	event.add('forge:plates/compressed_iron', ['kubejs:compressed_sheet']),
 	event.add('forge:plates/iron', ['tfc:metal/sheet/wrought_iron']),
 	event.add('forge:plates/steel', ['tfc:metal/sheet/steel']),
 	event.add('forge:plates/gold', ['tfc:metal/sheet/gold']),
@@ -442,8 +418,6 @@ onEvent('tags.items', event => {
 	event.add('forge:dusts/sulfur', ['tfc:powder/sulfur']),
 	event.add('forge:glue', ['tfc:glue', 'create:super_glue']),
 	event.add('forge:bicoals', ['tfc:ore/bituminous_coal', 'minecraft:coal']),
-//	event.add('forge:raw_materials', ['kubejs:raw_platinum']),
-//	event.add('forge:raw_materials/platinum', ['kubejs:raw_platinum'])
 	event.add('forge:tallow_source', ['tfc:blubber', 'minecraft:rotten_flesh'])
 	event.add('forge:supports', ['tfc:wood/support/acacia', 'tfc:wood/support/ash', 'tfc:wood/support/aspen', 'tfc:wood/support/birch', 'tfc:wood/support/blackwood', 'tfc:wood/support/chestnut', 'tfc:wood/support/douglas_fir', 'tfc:wood/support/hickory', 'tfc:wood/support/kapok', 'tfc:wood/support/maple', 'tfc:wood/support/oak', 'tfc:wood/support/palm', 'tfc:wood/support/acacia', 'tfc:wood/support/pine', 'tfc:wood/support/rosewood', 'tfc:wood/support/sequoia', 'tfc:wood/support/spruce', 'tfc:wood/support/sycamore', 'tfc:wood/support/white_cedar', 'tfc:wood/support/willow'])
 	event.add('forge:tools/knives', '#tfc:knives')
@@ -453,7 +427,6 @@ onEvent('tags.items', event => {
 	event.add('forge:sugar_source', ['tfc:food/beet', 'tfc:food/sugarcane', 'minecraft:sugar_cane'])
 	event.add('forge:sugar', 'minecraft:sugar')
 	event.add('forge:flour/wheat', '#tfc:foods/flour')
-//	event.add('forge:treated_wood', 'firmalife:treated_wood')
 	event.add('forge:small_cogwheel', 'create:cogwheel')
 	event.add('forge:large_cogwheel', 'create:large_cogwheel')
 	event.add('forge:dusts/salt', 'tfc:powder/salt')
@@ -495,92 +468,4 @@ onEvent('tags.items', event => {
 	// ==========  REMOVE
 	event.remove('forge:dusts/coal_coke', ['tfc:powder/graphite'])
 	event.remove('forge:ingots/andesite_alloy', 'create:andesite_alloy')
-/*	event.removeAllTagsFrom(
-		'pneumaticcraft:oil',
-		'pneumaticcraft:diesel',
-		'pneumaticcraft:kerosene',
-		'pneumaticcraft:gasoline',
-		'pneumaticcraft:lubricant',
-		'pneumaticcraft:ethanol',
-		'immersiveengineering:dust_sulfur',
-		//'createindustrialchemistry:diamond_dusts',
-		//'createindustrialchemistry:coal_dusts',
-		//'createindustrialchemistry:nickel',
-		//'createindustrialchemistry:zinc_dusts',
-		//'createindustrialchemistry:copper_dusts',
-		//'createindustrialchemistry:iron_dusts',
-		//'createindustrialchemistry:aluminium',
-		'create:brass_ingot',
-		'create:brass_sheet',
-		'create:copper_sheet',
-		'create:iron_sheet',
-		'create:golden_sheet',
-		'create:zinc_ingot',
-		'create:wheat_flour',
-		'createaddition:electrum_ingot',
-		'createaddition:electrum_nugget',
-		'createaddition:electrum_sheet',
-		'createaddition:electrum_wire',
-		'createaddition:electrum_rod',
-		'createaddition:brass_rod',
-		'createaddition:copper_rod',
-		'createaddition:iron_rod',
-		'createaddition:gold_rod',
-		'createaddition:zinc_sheet',
-		'exnihilosequentia:copper_nugget',
-		'exnihilosequentia:zinc_ingot',
-		'exnihilosequentia:lead_ingot',
-		'exnihilosequentia:silver_ingot',
-		'exnihilosequentia:nickel_ingot',
-		'exnihilosequentia:tin_ingot',
-		'exnihilosequentia:platinum_ingot',
-		'exnihilosequentia:aluminum_ingot',
-		'exnihilosequentia:uranium_ingot',
-		'exnihilosequentia:raw_lead',
-		'exnihilosequentia:raw_silver',
-		'exnihilosequentia:raw_nickel',
-		'exnihilosequentia:raw_tin',
-		'exnihilosequentia:raw_platinum',
-		'exnihilosequentia:raw_aluminum',
-		'exnihilosequentia:raw_uranium',
-		'exnihilosequentia:raw_zinc',
-		'immersiveengineering:plate_aluminum',
-		'immersiveengineering:plate_lead',
-		'immersiveengineering:plate_uranium',
-		'immersiveengineering:plate_constantan',
-		'immersiveengineering:plate_electrum',
-		'immersiveengineering:plate_iron',
-		'immersiveengineering:plate_gold',
-		'immersiveengineering:plate_silver',
-		'immersiveengineering:ingot_nickel',
-		'immersiveengineering:ingot_silver',
-		'immersiveengineering:ingot_steel',
-		'immersiveengineering:dust_steel',
-		'immersiveengineering:dust_gold',
-		'immersiveengineering:dust_iron',
-		'immersiveengineering:dust_lead',
-		'immersiveengineering:dust_uranium',
-		'immersiveengineering:plate_steel',
-		'immersiveengineering:plate_nickel',
-		'immersiveengineering:stick_steel',
-		'immersiveengineering:stick_iron',
-		'immersiveengineering:stick_stick',
-		'immersiveengineering:nugget_copper',
-		'immersiveengineering:dust_copper',
-		'immersiveengineering:dust_saltpeter',
-		'immersiveengineering:wire_copper',
-		'immersiveengineering:plate_copper',
-		'immersiveposts:stick_copper',
-		'immersiveposts:stick_gold',
-		'immersiveposts:stick_silver',
-		'immersiveposts:stick_nickel',
-		'minecraft:copper_ingot',
-		'minecraft:chest',
-//		'minecraft:glass',
-//		'minecraft:glass_pane',
-		'minecraft:gold_ingot',
-		'pneumaticcraft:wheat_flour',
-		'tinycoal:tinycoal',
-		'tinycoal:tinycharcoal'
-	)*/
 })

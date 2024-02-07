@@ -1,0 +1,96 @@
+{
+    "textures": {
+        "syrup_levels": "exoticbirds:block/syrup_levels",
+        "rope": "exoticbirds:block/rope",
+        "hummingbird_feeder": "exoticbirds:block/hummingbird_feeder",
+        "particle": "#hummingbird_feeder"
+    },
+    "elements": [
+        {
+            "from": [ 8, 11, 7.5 ], 
+            "to": [ 8, 16, 8.5 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45.0 },
+            "faces": {
+                "east": { "texture": "#rope", "uv": [ 0, 0, 1, 5 ] },
+                "west": { "texture": "#rope", "uv": [ 1, 0, 2, 5 ] }
+            }
+        },
+        {
+            "from": [ 7.5, 11, 8 ], 
+            "to": [ 8.5, 16, 8 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#rope", "uv": [ 2, 0, 3, 5 ] },
+                "south": { "texture": "#rope", "uv": [ 3, 0, 4, 5 ] }
+            }
+        },
+        {
+            "from": [ 6, 4, 6 ], 
+            "to": [ 10, 5, 10 ], 
+            "faces": {
+                "north": { "texture": "#hummingbird_feeder", "uv": [ 0, 15, 4, 16 ] },
+                "east": { "texture": "#hummingbird_feeder", "uv": [ 0, 15, 4, 16 ] },
+                "south": { "texture": "#hummingbird_feeder", "uv": [ 0, 15, 4, 16 ] },
+                "west": { "texture": "#hummingbird_feeder", "uv": [ 0, 15, 4, 16 ] },
+                "up": { "texture": "#hummingbird_feeder", "uv": [ 0, 4, 4, 8 ] },
+                "down": { "texture": "#hummingbird_feeder", "uv": [ 0, 0, 4, 4 ] }
+            }
+        },
+        {
+            "from": [ 4.5, 1, 4.5 ], 
+            "to": [ 11.5, 3, 11.5 ], 
+            "faces": {
+                "north": { "texture": "#hummingbird_feeder", "uv": [ 4, 14, 11, 16 ] },
+                "east": { "texture": "#hummingbird_feeder", "uv": [ 4, 14, 11, 16 ] },
+                "south": { "texture": "#hummingbird_feeder", "uv": [ 4, 14, 11, 16 ] },
+                "west": { "texture": "#hummingbird_feeder", "uv": [ 4, 14, 11, 16 ] },
+                "up": { "texture": "#hummingbird_feeder", "uv": [ 4, 0, 11, 7 ] },
+                "down": { "texture": "#hummingbird_feeder", "uv": [ 4, 7, 11, 14 ] }
+            }
+        },
+        {
+            "from": [ 6.5, 3, 6.5 ], 
+            "to": [ 9.5, 4, 9.5 ], 
+            "faces": {
+                "north": { "texture": "#hummingbird_feeder", "uv": [ 11, 0, 14, 1 ] },
+                "east": { "texture": "#hummingbird_feeder", "uv": [ 11, 0, 14, 1 ] },
+                "south": { "texture": "#hummingbird_feeder", "uv": [ 11, 0, 14, 1 ] },
+                "west": { "texture": "#hummingbird_feeder", "uv": [ 11, 0, 14, 1 ] }
+            }
+        },
+        {
+            "from": [ 6, 11, 6 ], 
+            "to": [ 10, 13, 10 ], 
+            "faces": {
+                "north": { "texture": "#hummingbird_feeder", "uv": [ 0, 8, 4, 10 ] },
+                "east": { "texture": "#hummingbird_feeder", "uv": [ 0, 8, 4, 10 ] },
+                "south": { "texture": "#hummingbird_feeder", "uv": [ 0, 8, 4, 10 ] },
+                "west": { "texture": "#hummingbird_feeder", "uv": [ 0, 8, 4, 10 ] },
+                "up": { "texture": "#hummingbird_feeder", "uv": [ 0, 0, 4, 4 ] },
+                "down": { "texture": "#hummingbird_feeder", "uv": [ 0, 4, 4, 8 ] }
+            }
+        },
+        {
+            "from": [ 6, 5, 6 ], 
+            "to": [ 10, 9, 10 ], 
+            "faces": {
+                "north": { "texture": "#syrup_levels", "uv": [ 0, 2, 4, 6 ] },
+                "east": { "texture": "#syrup_levels", "uv": [ 0, 2, 4, 6 ] },
+                "south": { "texture": "#syrup_levels", "uv": [ 0, 2, 4, 6 ] },
+                "west": { "texture": "#syrup_levels", "uv": [ 0, 2, 4, 6 ] },
+                "up": { "texture": "#syrup_levels", "uv": [ 0, 7, 4, 11 ] },
+                "down": { "texture": "#syrup_levels", "uv": [ 0, 7, 4, 11 ] }
+            }
+        },
+        {
+            "from": [ 6, 9, 6 ], 
+            "to": [ 10, 11, 10 ], 
+            "faces": {
+                "north": { "texture": "#syrup_levels", "uv": [ 4, 0, 8, 2 ] },
+                "east": { "texture": "#syrup_levels", "uv": [ 4, 0, 8, 2 ] },
+                "south": { "texture": "#syrup_levels", "uv": [ 4, 0, 8, 2 ] },
+                "west": { "texture": "#syrup_levels", "uv": [ 4, 0, 8, 2 ] }
+            }
+        }
+    ]
+}

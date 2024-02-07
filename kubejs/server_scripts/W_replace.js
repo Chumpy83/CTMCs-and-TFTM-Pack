@@ -1,5 +1,9 @@
 // priority: 10
 //remove and re add recipes for plates, the volumes of metal were wrong due to mod interaction
+settings.logAddedRecipes = true
+settings.logRemovedRecipes = true
+settings.logSkippedRecipes = false
+settings.logErroringRecipes = true
 onEvent('recipes', event => {
 	const tfcMetals = [
 		"bismuth", "bismuth_bronze", "black_bronze", "brass", "bronze", "copper", "gold", "nickel", "rose_gold", "silver",
@@ -47,7 +51,9 @@ onEvent('recipes', event => {
 		const temp =firmaTemps[i];
 		event.recipes.tfc.heating(Fluid.of('firmalife:metal/' + metal, 200),'tfc_metalwork:metal/large_plate/' + metal, temp) })		
 	})
-
+	/*onEvent('recipes', event => {
+		event.tfcReplaceBlockInput('tfc:aggregate', /minecraft:\_concrete_powder/)
+	})*/
 onEvent('recipes', event => {
 	// mods
 	event.replaceInput({mod: 'immersiveposts'}, 'minecraft:stone_bricks', '#tfc:rock/bricks')
@@ -97,7 +103,12 @@ onEvent('recipes', event => {
 	event.replaceInput({mod: 'create'}, 'minecraft:spruce_planks', 'tfc:wood/planks/spruce')
 	event.replaceInput({mod: 'railways', output: 'railways:conductor_whistle'}, 'minecraft:copper_ingot', 'create:brass_nugget'),
 	event.replaceInput({output: 'create:rope_pulley'}, '#forge:wool', 'immersiveengineering:wirecoil_structure_rope')
-
+	event.replaceInput({mod: 'create_things_and_misc'}, 'minecraft:oak_planks', 'tfc:wood/planks/oak')
+	event.replaceInput({mod: 'create_things_and_misc'}, 'minecraft:acacia_planks', 'tfc:wood/planks/acacia')
+	event.replaceInput({mod: 'create_things_and_misc'}, 'minecraft:spruce_planks', 'tfc:wood/planks/spruce')
+	event.replaceInput({mod: 'create_things_and_misc'}, 'minecraft:birch_planks', 'tfc:wood/planks/birch')
+	event.replaceInput({output: 'controlengineering:punched_tape'}, '#forge:slimeballs', 'tfc:glue')
+	event.replaceInput({mod: 'astikorcarts'}, '#forge:rods', 'create:')
 	// general shapeless
 	event.replaceInput({type: 'minecraft:crafting_shapeless'}, 'minecraft:glass_pane', '#forge:glass_panes/colorless')
 	event.replaceInput({type: 'minecraft:crafting_shapeless'}, 'minecraft:stone', '#tfc:rock/raw')

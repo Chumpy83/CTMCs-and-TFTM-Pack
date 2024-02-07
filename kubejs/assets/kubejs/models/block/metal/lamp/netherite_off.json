@@ -1,0 +1,7 @@
+{
+  "parent": "tfc:block/lamp",
+  "textures": {
+    "metal": "kubejs:block/metal/full/netherite",
+    "lamp": "kubejs:block/lamp_off"
+  }
+}

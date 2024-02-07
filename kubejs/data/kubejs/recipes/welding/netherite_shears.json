@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "item": "kubejs:metal/knife_blade/netherite"
+  },
+  "second_input": {
+    "item": "kubejs:metal/knife_blade/netherite"
+  },
+  "tier": 5,
+  "result": {
+    "item": "kubejs:metal/shears/netherite"
+  }
+}

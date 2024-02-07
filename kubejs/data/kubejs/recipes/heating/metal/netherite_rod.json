@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "kubejs:metal/rod/netherite"
+  },
+  "result_fluid": {
+    "fluid": "kubejs:metal/netherite",
+    "amount": 50
+  },
+  "temperature": 1700
+}

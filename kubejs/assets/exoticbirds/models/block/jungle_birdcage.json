@@ -1,0 +1,9 @@
+{
+    "parent": "exoticbirds:block/birdcage",
+    "textures": {
+        "particle": "block/iron_block",
+        "side": "exoticbirds:block/iron_cage_side",
+        "top": "exoticbirds:block/iron_cage_top",
+        "base": "block/jungle_planks"
+    }
+}

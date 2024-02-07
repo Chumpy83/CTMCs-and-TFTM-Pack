@@ -1,0 +1,13 @@
+{
+  "type": "tfc:welding",
+  "first_input": {
+    "tag": "forge:sheets/netherite"
+  },
+  "second_input": {
+    "tag": "forge:sheets/netherite"
+  },
+  "tier": 5,
+  "result": {
+    "item": "kubejs:metal/double_sheet/netherite"
+  }
+}

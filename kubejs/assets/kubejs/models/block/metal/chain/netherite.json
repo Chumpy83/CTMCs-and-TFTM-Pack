@@ -1,0 +1,7 @@
+{
+  "parent": "kubejs:block/chain",
+  "textures": {
+    "all": "kubejs:block/metal/chain/netherite",
+    "particle": "kubejs:block/metal/full/netherite"
+  }
+}

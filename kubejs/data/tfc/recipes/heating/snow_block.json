@@ -1,0 +1,11 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "minecraft:snow_block"
+  },
+  "result_fluid": {
+    "fluid": "minecraft:water",
+    "amount": 25
+  },
+  "temperature": 50
+  }

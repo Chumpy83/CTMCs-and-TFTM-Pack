@@ -1,0 +1,6 @@
+{
+  "parent": "kubejs:block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "kubejs:block/metal/trapdoor/netherite"
+  }
+}

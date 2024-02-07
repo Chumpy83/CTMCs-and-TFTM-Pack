@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/orientable",
+    "textures": {
+        "top": "exoticbirds:block/identifier_top",
+        "front": "exoticbirds:block/identifier_front_off",
+        "side": "exoticbirds:block/identifier_side",
+        "south": "exoticbirds:block/identifier_back"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "exoticbirds:block/warped_birdcage" },
+        "facing=south": { "model": "exoticbirds:block/warped_birdcage", "y": 180 },
+        "facing=west":  { "model": "exoticbirds:block/warped_birdcage", "y": 270 },
+        "facing=east":  { "model": "exoticbirds:block/warped_birdcage", "y": 90 }
+    }
+}

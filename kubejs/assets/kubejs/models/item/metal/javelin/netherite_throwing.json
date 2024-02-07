@@ -1,0 +1,6 @@
+{
+  "parent": "item/trident_throwing",
+  "textures": {
+    "particle": "kubejs:item/metal/javelin/netherite"
+  }
+}

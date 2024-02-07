@@ -1,0 +1,9 @@
+{
+  "parent": "exoticbirds:block/birdhouse",
+  "textures": {
+    "walls": "block/birch_planks",
+    "perch": "block/spruce_planks",
+    "roof": "block/lime_concrete",
+    "particle": "block/birch_planks"
+  }
+}

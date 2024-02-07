@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "exoticbirds:block/jungle_birdcage" },
+        "facing=south": { "model": "exoticbirds:block/jungle_birdcage", "y": 180 },
+        "facing=west":  { "model": "exoticbirds:block/jungle_birdcage", "y": 270 },
+        "facing=east":  { "model": "exoticbirds:block/jungle_birdcage", "y": 90 }
+    }
+}

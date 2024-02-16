@@ -1,0 +1,12 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "tag": "quark:shards"
+  },
+  "result_fluid": {
+    "fluid": "kubejs:metal/glass",
+    "amount": 25
+  },
+  "temperature": 400,
+  "use_durability": true
+}

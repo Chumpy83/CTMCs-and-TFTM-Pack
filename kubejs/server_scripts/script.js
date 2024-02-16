@@ -192,6 +192,16 @@ onEvent('recipes', event => {
 				N: 'chemlib:tin_nugget'
 				}
 			),
+	event.shaped(
+		Item.of('create:super_glue',1),
+		[  'GP',
+		   ' G'],
+			{ 
+				P: 'create_things_and_misc:glue_packaging',
+				G: 'tfc:glue'
+			}
+		),	
+			'create_things_and_misc:glue_packaging'
 ////////					  
     event.shaped(
 		Item.of('createchunkloading:chunk_loader',1),
@@ -542,6 +552,17 @@ onEvent('recipes', event => {
 			S: 'tfc:metal/sheet/copper',
 			A: 'create:andesite_alloy',
 			P: 'tfc_metalwork:metal/plate/copper',
+		}
+	)
+	event.shaped(
+		Item.of('create:netherite_backtank',1),
+		[  'NPN',
+	       'S S',
+		   ' S '],
+		{ 
+			S: 'kubejs:metal/sheet/netherite',
+			N: 'kubejs:metal/ingot/netherite',
+			P: 'createdeco:netherite_sheet',
 		}
 	)
 	event.shaped(
@@ -1121,14 +1142,79 @@ onEvent('recipes', event => {
 		S: '#forge:rods/wooden',
 		P: 'tfc_metalwork:metal/plate/wrought_iron'
 	})
-	event.shaped('exoticbirds:gold_birdcage', [
-		' B ',
-		'BSB',
-		'PPP'
+	event.shaped('immersiveengineering:reinforced_crate', [
+		'WPW',
+		'SBS',
+		'WPW'
 	], {
-		B: 'createdeco:gold_bars',
-		S: '#forge:rods/wooden',
-		P: 'tfc_metalwork:metal/plate/gold'
+		W: '#forge:treated_wood',
+		S: 'kubejs:metal/bolt/bolt_wrought_iron',
+		P: '#forge:plates/iron',
+		B: 'immersiveengineering:crate'
+	})
+	event.shaped('immersiveengineering:heavy_engineering', [
+		'SHS',
+		'CGC',
+		'SCS'
+	], {
+		S: 'immersiveengineering:sheetmetal_steel',
+		C: 'immersiveengineering:component_steel',
+		G: 'thermal:electrum_gear',
+		H: '#tfc:hammer2'
+	})
+	event.shaped('immersiveengineering:light_engineering', [
+		'SHS',
+		'CGC',
+		'SCS'
+	], {
+		S: 'immersiveengineering:sheetmetal_iron',
+		C: 'immersiveengineering:component_iron',
+		G: 'tfc_metalwork:metal/small_gear/wrought_iron',
+		H: '#tfc:hammer2'
+	})
+	event.shaped('immersiveengineering:component_iron', [
+		'SCS',
+		' G ',
+		'SCS'
+	], {
+		S: '#forge:plates/iron',
+		C: 'kubejs:metal/bolt/bolt_wrought_iron',
+		G: '#forge:ingots/copper'
+	})
+	event.shaped('immersiveengineering:component_steel', [
+		'SCS',
+		' G ',
+		'SCS'
+	], {
+		S: '#forge:plates/steel',
+		C: 'kubejs:metal/bolt/bolt_steel',
+		G: '#forge:ingots/copper'
+	})
+	event.shaped(Item.of('create:copper_diving_boots', '{Damage:0}'), [
+		' B ',
+		'G G',
+		'A A'
+	], {
+		B: Item.of('tfc:metal/boots/copper', '{Damage:0}'),
+		G: 'tfc:glue',
+		A: 'create:andesite_alloy'
+	})
+	event.shaped(Item.of('create:netherite_diving_boots', '{Damage:0}'), [
+		' B ',
+		'G G',
+		'A A'
+	], {
+		B: Item.of('kubejs:metal/boots/netherite', '{Damage:0}'),
+		G: 'tfc:glue',
+		A: 'kubejs:metal/ingot/netherite'
+	})
+	event.shaped('kubejs:unfired_glass_blower', [
+		' C ',
+		'CRC',
+		' C '
+	], {
+		C: 'minecraft:clay_ball',
+		R: '#forge:reeds'
 	})
 		event.recipes.tfc.damage_inputs_shapeless_crafting(
 			'kubejs:metal/bolt/bolt_wrought_iron',['kubejs:metal/bolt/wrought_iron','#forge:files'])
@@ -1139,7 +1225,6 @@ onEvent('recipes', event => {
 		event.recipes.tfc.damage_inputs_shapeless_crafting(
 			'kubejs:metal/bolt/wrought_iron',['immersiveengineering:stick_iron','#tfc:saw2'])
 	})
-	
 	//new shapeless recipes
 	//recipe for leaf blocks for all tfc types
 onEvent('recipes', event => {
@@ -1221,18 +1306,21 @@ onEvent('recipes', event => {
 	event.recipes.tfc.heating(Item.of('minecraft:glowstone_dust'), ('chemlib:zinc_sulfide_dust'), 300)  	
 	event.shapeless(Item.of('minecraft:blaze_powder', 2), ['#forge:dusts/iron', '#forge:dusts/iron', '#forge:dusts/iron', '#forge:dusts/aluminum'])
 	//soil builder
-	const nonSoil = ["moon_soil", "dark_soil", "red_soil", "scorched_soil", 'europa_sediment', 'titan_sludge']
+	const nonSoil = ["agape_space:moon_soil", "agape_space:dark_soil", "agape_space:red_soil", "agape_space:scorched_soil", 'agape_space:europa_sediment', 
+	'agape_space:titan_sludge', 'exnihilosequentia:dust']
 	nonSoil.forEach(i => {
-	event.shapeless(Item.of('tfc:dirt/loam', 4), [Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),
+	event.shapeless(Item.of('tfc:dirt/loam', 4), [Item.of(i),Item.of(i),Item.of(i),
 	'minecraft:clay','minecraft:clay','minecraft:clay','#forge:sand', '#forge:sand', 'tfc:compost'])
-	event.shapeless(Item.of('tfc:dirt/silty_loam', 4), [Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),
+	event.shapeless(Item.of('tfc:dirt/silty_loam', 4), [Item.of(i),Item.of(i),Item.of(i),
 	'minecraft:clay','minecraft:clay','#forge:sand','#forge:sand', '#forge:sand', 'tfc:compost'])
-	event.shapeless(Item.of('tfc:dirt/sandy_loam', 4), [Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),
+	event.shapeless(Item.of('tfc:dirt/sandy_loam', 4), [Item.of(i),Item.of(i),Item.of(i),
 	'minecraft:clay','#forge:sand','#forge:sand','#forge:sand', '#forge:sand', 'tfc:compost'])
-	event.shapeless(Item.of('tfc:dirt/silt', 4), [Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),Item.of('agape_space:'+ i),
+	event.shapeless(Item.of('tfc:dirt/silt', 4), [Item.of(i),Item.of(i),Item.of(i),
 	'minecraft:clay','minecraft:clay','minecraft:clay','minecraft:clay', '#forge:sand', 'tfc:compost'])
 	})
 	event.shapeless('create:copper_diving_helmet', ['minecraft:glass_pane', 'tfc:metal/helmet/copper', 'minecraft:leather', 'tfc:glue'])
+	event.shapeless('create:netherite_diving_helmet', ['thermal:obsidian_glass', 'kubejs:metal/helmet/netherite', 'minecraft:leather', 'tfc:glue'])
+
 	event.shapeless('kubejs:rootball', ['kubejs:taproot', 'kubejs:taproot', 'kubejs:taproot', 'kubejs:taproot'])
 	event.shapeless(
 		Item.of('minecraft:anvil',1),
@@ -1258,6 +1346,38 @@ onEvent('recipes', event => {
 		[ 
 		'tfc:ceramic/jug',
 		'minecraft:snow_block'
+		]
+	)
+	event.shapeless(
+		Item.of('kubejs:glass_mix',1),
+		[ 
+		'#forge:sand',
+		'tfc:powder/flux', 'tfc:powder/flux', 
+		'tfc:powder/wood_ash', 'tfc:powder/wood_ash'
+		]
+	)
+	event.shapeless(
+		Item.of('kubejs:glass_mix',1),
+		[ 
+		'#forge:sand',
+		'kubejs:limesand',
+		'tfc:powder/wood_ash', 'tfc:powder/wood_ash'
+		]
+	)
+	event.shapeless(
+		Item.of('kubejs:glass_mix',1),
+		[ 
+		'#forge:sand',
+		'kubejs:limesand',
+		'chemlib:sodium_carbonate_dust'
+		]
+	)
+	event.shapeless(
+		Item.of('kubejs:glass_mix',1),
+		[ 
+		'#forge:sand',
+		'tfc:powder/flux', 'tfc:powder/flux', 
+		'chemlib:sodium_carbonate_dust'
 		]
 	)
 	event.shapeless(
@@ -1413,6 +1533,7 @@ onEvent('recipes', event => {
 	event.recipes.create.crushing('4x tfc:powder/sylvite', 'tfc:ore/sylvite')
 	event.recipes.create.crushing('6x tfc:powder/flux', 'tfc:ore/borax')
 	event.recipes.create.crushing('4x tfc:powder/salt', 'tfc:ore/halite')
+	event.recipes.createCutting('6x create:andesite_alloy', 'tfc_metallum:metal/ingot/andesite_alloy')
 	event.recipes.createsifterSifting([Item.of('tfc:ore/small_native_copper').withChance(0.01).toJson(),Item.of('tfc:ore/small_native_gold').withChance(0.01).toJson(),Item.of('tfc:ore/small_hematite').withChance(0.01).toJson(),Item.of('tfc:ore/small_native_silver').withChance(0.01).toJson(),Item.of('tfc:ore/small_cassiterite').withChance(0.01).toJson(),Item.of('tfc:ore/small_bismuthinite').withChance(0.01).toJson(),Item.of('tfc:ore/small_garnierite').withChance(0.01).toJson(),Item.of('tfc:ore/small_malachite').withChance(0.01).toJson(),Item.of('tfc:ore/small_magnetite').withChance(0.01).toJson(),Item.of('tfc:ore/small_limonite').withChance(0.01).toJson(),Item.of('tfc:ore/small_sphalerite').withChance(0.01).toJson(),Item.of('tfc:ore/small_tetrahedrite').withChance(0.01).toJson(),Item.of('tfc_metallum:ore/small_bauxite').withChance(0.01).toJson()], ['#tfc:rock/gravel','createsifter:andesite_mesh'])
 	const stone = ["granite", "diorite", "gabbro", "shale", "claystone", "limestone", "conglomerate", "dolomite", "chert", "chalk", "rhyolite", "basalt", "andesite", "dacite", "quartzite", "slate", "phyllite", "schist", "gneiss", "marble"]
 	const ore = ["native_copper", "native_gold", "native_silver", "cassiterite"]

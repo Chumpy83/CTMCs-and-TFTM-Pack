@@ -1,0 +1,15 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:clay_knapping",
+  "outside_slot_required": true,
+  "pattern": [
+    "XXXXX",
+    "X   X",
+    "X   X",
+    "XXXXX",
+    "XXXXX"
+  ],
+  "result": {
+    "item": "kubejs:ceramic/unfired_sheet_mold"
+  }
+}

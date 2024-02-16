@@ -1,0 +1,18 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "kubejs:raw_rhino"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "kubejs:cooked_rhino"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}

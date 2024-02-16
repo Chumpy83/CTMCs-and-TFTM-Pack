@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "kubejs:ceramic/lens_mold"
+  },
+  "fluid": {
+    "ingredient": "kubejs:metal/glass",
+    "amount": 100
+  },
+  "result": {
+    "item": "kubejs:lens_clear"
+  },
+  "break_chance": 0.1
+}

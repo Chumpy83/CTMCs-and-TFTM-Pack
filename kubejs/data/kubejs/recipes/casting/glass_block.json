@@ -1,0 +1,14 @@
+{
+  "type": "tfc:casting",
+  "mold": {
+    "item": "kubejs:ceramic/block_mold"
+  },
+  "fluid": {
+    "ingredient": "kubejs:metal/glass",
+    "amount": 1000
+  },
+  "result": {
+    "item": "minecraft:glass"
+  },
+  "break_chance": 0.1
+}

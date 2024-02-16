@@ -1,0 +1,18 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "type": "tfc:not_rotten",
+    "ingredient": {
+      "item": "kubejs:raw_stuffed_pumpkin"
+    }
+  },
+  "result_item": {
+    "stack": {
+      "item": "farmersdelight:stuffed_pumpkin_block"
+    },
+    "modifiers": [
+      "tfc:copy_food"
+    ]
+  },
+  "temperature": 200
+}

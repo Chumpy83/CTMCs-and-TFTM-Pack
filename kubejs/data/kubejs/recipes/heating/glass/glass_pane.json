@@ -1,0 +1,12 @@
+{
+  "type": "tfc:heating",
+  "ingredient": {
+    "tag": "forge:glass_panes"
+  },
+  "result_fluid": {
+    "fluid": "kubejs:metal/glass",
+    "amount": 100
+  },
+  "temperature": 400,
+  "use_durability": true
+}

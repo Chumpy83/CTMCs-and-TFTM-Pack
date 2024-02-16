@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "kubejs:/metal/netherite", "kubejs:metal/glass"
+  ]
+}

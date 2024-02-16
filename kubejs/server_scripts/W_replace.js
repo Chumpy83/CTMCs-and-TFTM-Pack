@@ -88,6 +88,9 @@ onEvent('recipes', event => {
 	event.replaceInput({type: 'minecraft:crafting_shaped'}, 'create:zinc_ingot', '#forge:ingots/zinc')
 	event.replaceInput({type: 'minecraft:crafting_shaped'}, 'minecraft:iron_block', 'tfc_metalwork:metal/block/wrought_iron')
 	event.replaceInput({mod: 'createindustry'}, 'createindustry:steel_block', 'tfc_metalwork:metal/block/steel')
+	event.replaceInput({id: 'create_electric_stonks:reinforced_redstone_resonance_generator'}, 'tfc:gem/diamond', 'kubejs:metal/ingot/netherite')
+	event.replaceInput({id: 'create_electric_stonks:reinforced_motor'}, 'tfc:gem/diamond', 'kubejs:metal/ingot/netherite')
+	event.replaceInput({id: 'create_electric_stonks:reinforced_heavy_motor'}, 'tfc:gem/diamond', 'kubejs:metal/ingot/netherite')
 	event.replaceInput({mod: 'createindustry'}, 'create:limestone', 'tfc:rock/gravel/limestone')
 	event.replaceInput({mod: 'createindustry'}, 'minecraft:gravel', '#forge:gravel')
 	event.replaceInput({mod: 'createindustry'}, 'minecraft:sand', '#forge:sand')
@@ -109,6 +112,7 @@ onEvent('recipes', event => {
 	event.replaceInput({mod: 'create_things_and_misc'}, 'minecraft:birch_planks', 'tfc:wood/planks/birch')
 	event.replaceInput({output: 'controlengineering:punched_tape'}, '#forge:slimeballs', 'tfc:glue')
 	event.replaceInput({mod: 'astikorcarts'}, '#forge:rods', 'create:')
+	event.replaceInput({mod: 'supercircuitmaker'}, 'minecraft:deepslate', 'immersiveengineering:steel_plate')
 	// general shapeless
 	event.replaceInput({type: 'minecraft:crafting_shapeless'}, 'minecraft:glass_pane', '#forge:glass_panes/colorless')
 	event.replaceInput({type: 'minecraft:crafting_shapeless'}, 'minecraft:stone', '#tfc:rock/raw')
@@ -117,6 +121,8 @@ onEvent('recipes', event => {
 	//replace output
 	event.replaceOutput({}, 'minecraft:gold_ingot', 'tfc:metal/ingot/gold')
 	event.replaceOutput({}, 'minecraft:copper_ingot', 'tfc:metal/ingot/copper')
+	event.replaceOutput({id: 'tfc:heating/glass_from_shards'}, 'minecraft:glass', 'tfc:metal/glass')
+	event.replaceOutput({id: 'tfc:heating/glass_from_sand'}, 'minecraft:glass', 'tfc:metal/glass')
 	//replace input
 	event.replaceInput({}, 'minecraft:slime_ball', 'tfc:glue')
 	event.replaceInput({}, 'minecraft:slime_block', 'afc:rubber_bar')
@@ -126,4 +132,6 @@ onEvent('recipes', event => {
 	event.replaceInput({output: 'create:mechanical_plough'}, '#forge:plates/iron', 'tfc:metal/hoe_head/wrought_iron')
 	event.replaceInput({output: 'create:cart_assembler'}, 'minecraft:redstone', 'pneumaticcraft:printed_circuit_board')
 	event.replaceInput({output: 'agricraft:seed_analyzer'}, 'minecraft:stone_slab', '#create:sleepers')
+	event.replaceInput({output: 'create:crafting/kinetics/framed_glass_trapdoor'}, 'create:framed_glass', 'create:framed_glass_pane')
+	event.replaceInput({output: 'agricraft:agricraft/magnifying_glass'}, 'minecraft:glass_pane', 'kubejs:lens_clear')
 	})

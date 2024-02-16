@@ -1,5 +1,10 @@
 // priority: 10
+// ========FLUIDS
 
+onEvent('tags.fluids', event => {
+	event.add('tfc:usable_in_ingot_mold', ['kubejs:metal/netherite', ] )
+	event.add('kubejs:liquid_glass', ['kubejs:metal/glass'])
+})
 // ======= BLOCKS
 // ========== ENTITY TYPE
 // ========= ITEMS
@@ -87,7 +92,7 @@ onEvent('tags.items', event => {
 	event.add('forge:lens', ['industrialforegoing:laser_lens0', 'industrialforegoing:laser_lens1', 'industrialforegoing:laser_lens2', 'industrialforegoing:laser_lens3', 'industrialforegoing:laser_lens4',
 			'industrialforegoing:laser_lens5', 'industrialforegoing:laser_lens6', 'industrialforegoing:laser_lens7', 'industrialforegoing:laser_lens8', 'industrialforegoing:laser_lens9', 
 			'industrialforegoing:laser_lens10', 'industrialforegoing:laser_lens11', 'industrialforegoing:laser_lens12', 'industrialforegoing:laser_lens13', 'industrialforegoing:laser_lens14', 
-			'industrialforegoing:laser_lens15'])
+			'industrialforegoing:laser_lens15', 'kubejs:lens_clear'])
 	event.add('minecolonies:compostable', ['exoticbirds:mystery_egg']),
 	event.add('forge:slimeballs', ['tfc:glue']),
 	event.add('firmalife:foods/heatable', [
@@ -104,9 +109,10 @@ onEvent('tags.items', event => {
 	]),
 	event.add('tfc:chisel2',['tfc:metal/chisel/wrought_iron', 'tfc:metal/chisel/steel', 'tfc:metal/chisel/black_steel', 'tfc:metal/chisel/red_steel', 'tfc:metal/chisel/blue_steel']), 
 	event.add('tfc:saw2',['tfc:metal/saw/wrought_iron', 'tfc:metal/saw/steel', 'tfc:metal/saw/black_steel', 'tfc:metal/saw/red_steel', 'tfc:metal/saw/blue_steel']), 
+	event.add('tfc:hammer2',['tfc:metal/hammer/steel', 'tfc:metal/hammer/black_steel', 'tfc:metal/hammer/red_steel', 'tfc:metal/hammer/blue_steel']), 
 	event.add('forge:files', ['kubejs:metal/file/wrought_iron', 'kubejs:metal/file/steel', 'kubejs:metal/file/black_steel', 'kubejs:metal/file/red_steel', 'kubejs:metal/file/blue_steel']),
 	event.add('tfc:chicken_food', ['exnihilosequentia:silkworm']),
-	event.add('tfc:quai_food', ['exnihilosequentia:silkworm']),
+	event.add('tfc:quail_food', ['exnihilosequentia:silkworm']),
 	event.add('tfc:duck_food', ['exnihilosequentia:silkworm']),
 	event.add('firmalife:usable_in_stovetop_soup', [
 		'exoticbirds:mystery_egg'
@@ -129,6 +135,9 @@ onEvent('tags.items', event => {
 		'minecraft:beef',
 		'exoticbirds:raw_birdmeat'
 	]),
+	event.add('forge:reeds', ['tfc:plant/dry_phragmite', 'tfc:plant/arundo']),
+	event.add('tfc:unfired_molds', ['kubejs:ceramic/unfired_sheet_mold', 'kubejs:ceramic/unfired_block_mold', 'kubejs:ceramic/unfired_lens_mold', 'kubejs:unfired_glass_blower']),
+	event.add('tfc:fired_molds', ['kubejs:ceramic/sheet_mold', 'kubejs:ceramic/block_mold', 'kubejs:ceramic/lens_mold', 'kubejs:ceramic/glass_blower']),
 	event.add('tfc:foods/cooked_meats', [
 	]),
 	event.add('tfc:foods/usable_in_soup', [

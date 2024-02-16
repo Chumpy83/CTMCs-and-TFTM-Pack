@@ -1,0 +1,11 @@
+{
+  "__comment__": "This file was automatically created by mcresources",
+  "type": "tfc:heating",
+  "ingredient": {
+    "item": "kubejs:unfired_glass_blower"
+  },
+  "result_item": {
+    "item": "kubejs:ceramic/glass_blower"
+  },
+  "temperature": 1399
+}

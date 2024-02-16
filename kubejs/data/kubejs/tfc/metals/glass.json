@@ -1,0 +1,12 @@
+{
+  "tier": 6,
+  "fluid": "kubejs:metal/glass",
+  "melt_temperature": 400,
+  "specific_heat_capacity": 0.75,
+  "ingots": {
+    "item": "minecraft:glass_pane"
+  },
+  "sheets": {
+    "item": "minecraft:glass"
+  }
+}

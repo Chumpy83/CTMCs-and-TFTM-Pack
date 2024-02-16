@@ -1,0 +1,8 @@
+{
+  "loader": "tfc:contained_fluid",
+  "parent": "forge:item/default",
+  "textures": {
+    "base": "kubejs:item/ceramic/glass_blower",
+    "fluid": "kubejs:item/ceramic/glass_blower_overlay"
+  }
+}
